@@ -9,25 +9,47 @@
 
 <body>
 
-<div id="login" class="card">
-    <h1>💜 Hi Bangaram</h1>
-    <p>Welcome to our world.</p>
+<div id="app">
 
-    <input id="pw" type="password" placeholder="Enter our secret password">
+<h1>💜 Hi Bangaram</h1>
 
-    <button onclick="unlock()">Open Our Diary</button>
+<p>Welcome to our world.</p>
 
-    <p id="msg"></p>
+<h1>To My Bangaram, Lahari ❤️</h1>
+
+<p id="days"></p>
+
+<div class="card">
+<h2>My First Letter</h2>
+
+<p>
+Every heartbeat writes another page of our story.
+This little corner of the internet is only for us.
+</p>
 </div>
 
-<div id="app" style="display:none">
+<div class="card">
+<h2>📸 Our Beautiful Memories</h2>
 
-    <h1>To My Bangaram, Lahari ❤️</h1>
+<div class="gallery">
+<img src="IMG_7216.png" alt="Memory 1">
+<img src="IMG_7232.jpeg" alt="Memory 2">
+<img src="IMG_7233.jpeg" alt="Memory 3">
+<img src="IMG_7247.jpeg" alt="Memory 4">
+<img src="IMG_7248.jpeg" alt="Memory 5">
+</div>
 
-    <p id="days"></p>
+</div>
 
-    <div class="card">
-        <h2>My First Letter</h2>
+</div>
 
-        <p>
-            Every heartbeat writes another page of our story.
+<script>
+const start = new Date('2026-02-06T00:00:00');
+const now = new Date();
+const days = Math.floor((now - start) / (1000 * 60 * 60 * 24));
+document.getElementById('days').innerText =
+'Together since 6 Feb 2026 • ' + days + ' days';
+</script>
+
+</body>
+</html>
