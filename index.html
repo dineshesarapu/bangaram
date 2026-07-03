@@ -1,54 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our World ❤️</title>
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#6a5cff,#55b7ff,#ff7fd1);
+    color:white;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    padding:20px;
+    border-radius:20px;
+    margin:25px auto;
+    max-width:900px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+
 </head>
 
 <body>
 
-<div id="app">
+<div class="card">
 
 <h1>💜 Hi Bangaram</h1>
 
-<p>Welcome to our world.</p>
+<p>Welcome to our little world.</p>
 
-<h1>To My Bangaram, Lahari ❤️</h1>
+<h2>To My Bangaram, Lahari ❤️</h2>
 
 <p id="days"></p>
 
+</div>
+
 <div class="card">
-<h2>My First Letter</h2>
+
+<h2>💌 My First Letter</h2>
 
 <p>
 Every heartbeat writes another page of our story.
 This little corner of the internet is only for us.
+No matter where life takes us, I will always treasure
+every smile, every hug and every beautiful memory with you.
+❤️
 </p>
+
 </div>
 
 <div class="card">
+
 <h2>📸 Our Beautiful Memories</h2>
 
 <div class="gallery">
+
 <img src="IMG_7216.png" alt="Memory 1">
+
 <img src="IMG_7232.jpeg" alt="Memory 2">
+
 <img src="IMG_7233.jpeg" alt="Memory 3">
+
 <img src="IMG_7247.jpeg" alt="Memory 4">
+
 <img src="IMG_7248.jpeg" alt="Memory 5">
+
 </div>
 
 </div>
+
+<div class="card">
+
+<h2>💋 Our First Kiss</h2>
+
+<p>
+
+"There are moments that change life forever.
+For us, this place will always remind us of
+our very first kiss and the beginning of
+another beautiful chapter."
+
+</p>
+
+<p>
+
+📍 Coordinates:<br>
+
+<b>17.793139, 83.389763</b>
+
+</p>
+
+<p>
+
+<a href="https://maps.google.com/?q=17.793139,83.389763" target="_blank">
+❤️ Open Our First Kiss Location on Google Maps
+</a>
+
+</p>
 
 </div>
 
 <script>
-const start = new Date('2026-02-06T00:00:00');
+
+const start = new Date("2026-02-06T00:00:00");
+
 const now = new Date();
-const days = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-document.getElementById('days').innerText =
-'Together since 6 Feb 2026 • ' + days + ' days';
+
+const days = Math.floor((now-start)/(1000*60*60*24));
+
+document.getElementById("days").innerHTML =
+"❤️ Together since 6 February 2026 • <b>"+days+"</b> beautiful days";
+
 </script>
 
 </body>
