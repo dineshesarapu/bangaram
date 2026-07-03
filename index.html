@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our World ❤️</title>
 
-<link rel="stylesheet" href="style.css">
-
 <style>
 body{
     margin:0;
@@ -17,17 +15,18 @@ body{
 }
 
 .card{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(15px);
-    padding:20px;
-    border-radius:20px;
-    margin:25px auto;
     max-width:900px;
+    margin:20px auto;
+    padding:20px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:15px;
 }
 
@@ -38,8 +37,18 @@ body{
 }
 
 a{
-    color:white;
+    color:#fff;
     text-decoration:none;
+    font-weight:bold;
+}
+
+h1,h2{
+    text-align:center;
+}
+
+#days{
+    text-align:center;
+    font-size:20px;
     font-weight:bold;
 }
 </style>
@@ -52,7 +61,7 @@ a{
 
 <h1>💜 Hi Bangaram</h1>
 
-<p>Welcome to our little world.</p>
+<p style="text-align:center;">Welcome to our little world ❤️</p>
 
 <h2>To My Bangaram, Lahari ❤️</h2>
 
@@ -64,12 +73,16 @@ a{
 
 <h2>💌 My First Letter</h2>
 
-<p>
+<p style="line-height:1.8;">
 Every heartbeat writes another page of our story.
 This little corner of the internet is only for us.
-No matter where life takes us, I will always treasure
-every smile, every hug and every beautiful memory with you.
-❤️
+
+No matter where life takes us, every smile, every hug,
+every laugh and every memory with you is priceless.
+
+I promise to keep making beautiful memories together.
+
+❤️ I Love You Forever ❤️
 </p>
 
 </div>
@@ -80,15 +93,17 @@ every smile, every hug and every beautiful memory with you.
 
 <div class="gallery">
 
-<img src="IMG_7216.png" alt="Memory 1">
+<img src="IMG_7685.png" alt="Memory">
 
-<img src="IMG_7232.jpeg" alt="Memory 2">
+<img src="IMG_7216.png" alt="Memory">
 
-<img src="IMG_7233.jpeg" alt="Memory 3">
+<img src="IMG_7232.jpeg" alt="Memory">
 
-<img src="IMG_7247.jpeg" alt="Memory 4">
+<img src="IMG_7233.jpeg" alt="Memory">
 
-<img src="IMG_7248.jpeg" alt="Memory 5">
+<img src="IMG_7247.jpeg" alt="Memory">
+
+<img src="IMG_7248.jpeg" alt="Memory">
 
 </div>
 
@@ -98,27 +113,23 @@ every smile, every hug and every beautiful memory with you.
 
 <h2>💋 Our First Kiss</h2>
 
-<p>
+<p style="line-height:1.8;">
+Some places become unforgettable because they hold our happiest memories.
 
-"There are moments that change life forever.
-For us, this place will always remind us of
-our very first kiss and the beginning of
-another beautiful chapter."
+This place will always remind us of our first kiss,
+the moment our hearts spoke without words.
 
+❤️ Forever my favourite place ❤️
 </p>
 
 <p>
-
-📍 Coordinates:<br>
-
-<b>17.793139, 83.389763</b>
-
+📍 <strong>17.793139, 83.389763</strong>
 </p>
 
 <p>
 
 <a href="https://maps.google.com/?q=17.793139,83.389763" target="_blank">
-❤️ Open Our First Kiss Location on Google Maps
+❤️ Open Our First Kiss Location
 </a>
 
 </p>
@@ -127,14 +138,12 @@ another beautiful chapter."
 
 <script>
 
-const start = new Date("2026-02-06T00:00:00");
+const start=new Date("2026-02-06T00:00:00");
+const now=new Date();
+const days=Math.floor((now-start)/(1000*60*60*24));
 
-const now = new Date();
-
-const days = Math.floor((now-start)/(1000*60*60*24));
-
-document.getElementById("days").innerHTML =
-"❤️ Together since 6 February 2026 • <b>"+days+"</b> beautiful days";
+document.getElementById("days").innerHTML=
+"❤️ Together since <b>6 February 2026</b><br><br><span style='font-size:28px;'>"+days+" Days ❤️</span>";
 
 </script>
 
