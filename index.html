@@ -133,3 +133,55 @@ document.getElementById("days").innerHTML =
 </body>
 
 </html>
+<script>
+
+// ❤️ Days Together Counter
+const start = new Date("2026-02-06");
+const today = new Date();
+
+const days = Math.floor((today-start)/(1000*60*60*24));
+
+document.getElementById("days").innerHTML =
+"❤️ Together since <b>6 February 2026</b><br><br><span style='font-size:24px;'>"+days+" Beautiful Days ❤️</span>";
+
+
+// 🌸 Bangaram's Cycle Tracker (Estimated)
+const lastPeriod = new Date("2026-05-31");
+const cycleLength = 28;
+
+let nextPeriod = new Date(lastPeriod);
+
+while (nextPeriod <= today){
+    nextPeriod.setDate(nextPeriod.getDate() + cycleLength);
+}
+
+const daysLeft = Math.ceil((nextPeriod - today)/(1000*60*60*24));
+
+const options = {
+    weekday:'long',
+    year:'numeric',
+    month:'long',
+    day:'numeric'
+};
+
+document.getElementById("cycleInfo").innerHTML =
+`
+<b>🌸 Last Period</b><br>
+31 May 2026
+
+<br><br>
+
+<b>📅 Estimated Next Period</b><br>
+${nextPeriod.toLocaleDateString('en-US', options)}
+
+<br><br>
+
+<b>⏳ Countdown</b><br>
+${daysLeft} day(s) remaining
+
+<br><br>
+
+<small>This is an estimate based on a 28-day cycle.</small>
+`;
+
+</script>
