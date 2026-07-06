@@ -13,9 +13,13 @@
     <h1>💜 Hi Bangaram</h1>
     <p>Welcome to our world ❤️</p>
 
-    <h1>To My Bangaram, Lahari ❤️</h1>
-    <p id="days"></p>
+    <!-- Day Counter Card Section -->
+    <div class="card">
+        <h2>To My Bangaram, Lahari ❤️</h2>
+        <p id="days" style="margin: 0;"></p>
+    </div>
 
+    <!-- Letter & Cycle Tracker Section -->
     <div class="card">
         <h2>💌 My First Letter</h2>
         <p>
@@ -30,6 +34,7 @@
         </div>
     </div>
 
+    <!-- Gallery Section -->
     <div class="card">
         <h2>📸 Our Beautiful Memories</h2>
         <div class="gallery">
@@ -42,6 +47,7 @@
         </div>
     </div>
 
+    <!-- Location Card Section -->
     <div class="card">
         <h2>📍 Our First Kiss ❤️</h2>
         <p>17.793139, 83.389763</p>
@@ -50,6 +56,7 @@
         </a>
     </div>
 
+    <!-- Telugu Love Letter Card Section -->
     <div class="card">
         <h2>📝 A Little Piece of My Heart</h2>
         <p style="text-align:justify;line-height:1.9;">
@@ -66,19 +73,20 @@
 
 </div>
 
+<!-- Consolidated JavaScript -->
 <script>
     // ❤️ Days Together Counter
     const start = new Date("2026-02-06");
     const today = new Date();
     
-    // Clear time factors to ensure accurate day calculation
+    // Clear time parameters to prevent mid-day fractional bugs
     start.setHours(0,0,0,0);
     today.setHours(0,0,0,0);
     
     const days = Math.floor((today - start) / (1000 * 60 * 60 * 24));
 
     document.getElementById("days").innerHTML =
-    "❤️ Together since <b>6 February 2026</b><br><br><span style='font-size:24px;'>" + days + " Beautiful Days ❤️</span>";
+    "Together since <b>6 February 2026</b><br><br><span style='font-size:24px; font-weight: bold;'>" + days + " Beautiful Days ❤️</span>";
 
     // 🌸 Bangaram's Cycle Tracker
     const lastPeriod = new Date("2026-05-31");
