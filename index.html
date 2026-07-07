@@ -6,17 +6,29 @@
     <title>Our World ❤️</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Styling for the Kiss Count Banner */
+        /* Base app adjustments to allow custom card colors to shine */
+        .card {
+            margin-bottom: 25px;
+            border-radius: 20px !important;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+            border: none !important;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Top Kiss Count Banner */
         .count-banner {
-            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
             color: white;
             text-align: center;
-            padding: 12px 15px;
+            padding: 14px 15px;
             border-radius: 15px;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.4);
+            box-shadow: 0 6px 20px rgba(255, 65, 108, 0.4);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -31,6 +43,74 @@
         .banner-divider {
             opacity: 0.6;
         }
+
+        /* --- 1. Day Counter Card (Soft Pearl) --- */
+        .card-days {
+            background: linear-gradient(135deg, #ffffff 0%, #fff0f2 100%) !important;
+            color: #d63384 !important;
+            padding: 20px;
+        }
+        .card-days h2 { color: #b81d61 !important; }
+
+        /* --- 2. First Letter & Cycle Tracker (Lavender Secret) --- */
+        .card-letter {
+            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%) !important;
+            color: #ffffff !important;
+        }
+        .card-letter h2 { color: #ffffff !important; }
+        .card-cycle-nested {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            backdrop-filter: blur(5px);
+        }
+        .card-cycle-nested h2 { color: #ffffff !important; }
+
+        /* --- 3. Gorintaku Card (Deep Mehendi Crimson) --- */
+        .card-gorintaku {
+            background: linear-gradient(135deg, #800020 0%, #b91c1c 100%) !important;
+            color: #ffe4e6 !important;
+        }
+        .card-gorintaku h2 { color: #ffffff !important; }
+
+        /* --- 4. Athamma Love Card (Warm Golden Amber) --- */
+        .card-athamma {
+            background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%) !important;
+            color: #ffffff !important;
+        }
+        .card-athamma h2 { color: #ffffff !important; }
+
+        /* --- 5. Gallery Card (Pastel Sky Blue) --- */
+        .card-gallery {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%) !important;
+            color: #0369a1 !important;
+        }
+        .card-gallery h2 { color: #0c4a6e !important; }
+
+        /* --- 6. Location Card (Emerald Mint) --- */
+        .card-location {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+            color: #ecfdf5 !important;
+        }
+        .card-location h2 { color: #ffffff !important; }
+        .card-location a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #059669 !important;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- 7. Deep Love Letter Card (Amethyst Royal Purple) --- */
+        .card-heart {
+            background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%) !important;
+            color: #f3e8ff !important;
+        }
+        .card-heart h2 { color: #ffffff !important; }
     </style>
 </head>
 <body>
@@ -44,35 +124,35 @@
         <span class="count-item">❤️ <b>98</b> Kisses</span>
     </div>
 
-    <h1>💜 Hi Bangaram</h1>
-    <p>Welcome to our world ❤️</p>
+    <h1 style="color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.2);">💜 Hi Bangaram</h1>
+    <p style="color: white; opacity: 0.9;">Welcome to our world ❤️</p>
 
-    <!-- Day Counter Card Section -->
-    <div class="card">
+    <!-- Day Counter Card Section (Soft Pearl) -->
+    <div class="card card-days">
         <h2>To My Bangaram, Lahari ❤️</h2>
         <p id="days" style="margin: 0;"></p>
     </div>
 
-    <!-- Letter & Cycle Tracker Section -->
-    <div class="card">
+    <!-- Letter & Cycle Tracker Section (Lavender Secret) -->
+    <div class="card card-letter">
         <h2>💌 My First Letter</h2>
-        <p>
+        <p style="opacity: 0.95;">
             Every heartbeat writes another page of our story.
             This little corner of the internet is only for us.
             No matter where life takes us, my heart will always find its way back to you.
         </p>
         
-        <div class="card">
+        <div class="card card-cycle-nested">
             <h2>🌸 Bangaram's Cycle Tracker</h2>
             <p id="cycleInfo"></p>
         </div>
     </div>
 
-    <!-- Gorintaku Card Section -->
-    <div class="card">
+    <!-- Gorintaku Card Section (Deep Mehendi Crimson) -->
+    <div class="card card-gorintaku">
         <h2>🌿 Bangaram ❤️</h2>
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="IMG_7711.jpeg" alt="Gorintaku" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="IMG_7711.jpeg" alt="Gorintaku" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.3);">
         </div>
         <p style="text-align:justify;line-height:1.9;">
             Ee roju nuvvu gorintaku pettukunnav ani telisinappati nundi naa mind lo okate alochana tirugutundi… adi entha baaga panduthundo ani. Kani nijam cheppalante, adi ela pandina naa prema matram eppatiki taggadu. Ninnu life-long chala happy ga, muddu ga, jagrathaga chusukunta.
@@ -91,8 +171,8 @@
         </p>
     </div>
 
-    <!-- Athamma Love Card Section -->
-    <div class="card">
+    <!-- Athamma Love Card Section (Warm Golden Amber) -->
+    <div class="card card-athamma">
         <h2>❤️ Athamma Love</h2>
         <p style="text-align:justify;line-height:1.9;">
             Athamma… ❤️
@@ -113,8 +193,8 @@
         </p>
     </div>
 
-    <!-- Gallery Section -->
-    <div class="card">
+    <!-- Gallery Section (Pastel Sky Blue) -->
+    <div class="card card-gallery">
         <h2>📸 Our Beautiful Memories</h2>
         <div class="gallery">
             <img src="IMG_7216.png" alt="">
@@ -126,17 +206,17 @@
         </div>
     </div>
 
-    <!-- Location Card Section -->
-    <div class="card">
+    <!-- Location Card Section (Emerald Mint) -->
+    <div class="card card-location">
         <h2>📍 Our First Kiss ❤️</h2>
-        <p>17.793139, 83.389763</p>
+        <p style="font-size: 18px; font-weight: 500;">17.793139, 83.389763</p>
         <a href="https://maps.google.com/?q=17.793139,83.389763" target="_blank">
             ❤️ Open Our Special Place ❤️
         </a>
     </div>
 
-    <!-- Telugu Love Letter Card Section -->
-    <div class="card">
+    <!-- Telugu Love Letter Card Section (Amethyst Royal Purple) -->
+    <div class="card card-heart">
         <h2>📝 A Little Piece of My Heart</h2>
         <p style="text-align:justify;line-height:1.9;">
             Bangaram,<br><br>
@@ -196,7 +276,7 @@
     <b>⏳ Countdown</b><br>
     ${daysLeft} day(s) remaining
     <br><br>
-    <small>This is an estimate based on a 28-day cycle.</small>
+    <small style='opacity: 0.8;'>This is an estimate based on a 28-day cycle.</small>
     `;
 </script>
 
