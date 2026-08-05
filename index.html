@@ -116,7 +116,7 @@
             box-shadow: 0 10px 25px rgba(255, 8, 68, 0.6);
         }
 
-        /* --- Fullscreen Overlay Modal for 6 Months Blog --- */
+        /* --- Fullscreen Overlay Modal --- */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -145,7 +145,7 @@
             height: 45px;
             border-radius: 50%;
             cursor: pointer;
-            z-index: 10000;
+            z-index: 10002;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -358,7 +358,6 @@
         }
 
         /* --- Existing Cards CSS --- */
-        /* --- 1. Day Counter Card (Soft Pearl) --- */
         .card-days {
             background: linear-gradient(135deg, #ffffff 0%, #fff0f2 100%) !important;
             color: #d63384 !important;
@@ -366,7 +365,6 @@
         }
         .card-days h2 { color: #b81d61 !important; }
 
-        /* --- 2. First Letter & Cycle Tracker (Lavender Secret) --- */
         .card-letter {
             background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%) !important;
             color: #ffffff !important;
@@ -380,7 +378,6 @@
         }
         .card-cycle-nested h2 { color: #ffffff !important; }
 
-        /* --- 3. Destiny & Sai Baba Card (Divine Saffron Maroon) --- */
         .card-destiny {
             background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%) !important;
             color: #ffedd5 !important;
@@ -388,14 +385,12 @@
         }
         .card-destiny h2 { color: #ffffff !important; }
 
-        /* --- 4. Gorintaku Card (Deep Mehendi Crimson) --- */
         .card-gorintaku {
             background: linear-gradient(135deg, #800020 0%, #b91c1c 100%) !important;
             color: #ffe4e6 !important;
         }
         .card-gorintaku h2 { color: #ffffff !important; }
 
-        /* --- 5. Bava's Promise Card (Twilight Lavender & Velvet Amethyst) --- */
         .card-bavas-promise {
             background: linear-gradient(135deg, #4a0e4e 0%, #2c0c30 100%) !important;
             color: #f3e8ff !important;
@@ -403,21 +398,18 @@
         }
         .card-bavas-promise h2 { color: #f472b6 !important; }
 
-        /* --- 6. Artist Card (Dreamy Deep Indigo) --- */
         .card-artist {
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%) !important;
             color: #e0e7ff !important;
         }
         .card-artist h2 { color: #ffffff !important; }
 
-        /* --- 7. Athamma Love Card (Warm Golden Amber) --- */
         .card-athamma {
             background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%) !important;
             color: #ffffff !important;
         }
         .card-athamma h2 { color: #ffffff !important; }
 
-        /* --- 8. Two Worlds, One Frame (Soft Sunset Rose) --- */
         .card-twoworlds {
             background: linear-gradient(135deg, #fe019a 0%, #fe7bb0 100%) !important;
             color: #ffffff !important;
@@ -435,14 +427,12 @@
             border: 3px solid rgba(255, 255, 255, 0.3);
         }
 
-        /* --- 9. Amma's Word & My Promise (Midnight Emerald Teal) --- */
         .card-promise {
             background: linear-gradient(135deg, #0f5257 0%, #0b3c49 100%) !important;
             color: #e7ecef !important;
         }
         .card-promise h2 { color: #ffffff !important; }
 
-        /* --- 10. First Restaurant Card (Warm Candlelight Amber & Velvet Rose) --- */
         .card-restaurant {
             background: linear-gradient(135deg, #d97706 0%, #9f1239 100%) !important;
             color: #fef3c7 !important;
@@ -450,7 +440,6 @@
         }
         .card-restaurant h2 { color: #ffffff !important; }
 
-        /* --- 11. Photo Frame Card (Warm Gold & Wooden Rose) --- */
         .card-frame {
             background: linear-gradient(135deg, #854d0e 0%, #b45309 100%) !important;
             color: #fef3c7 !important;
@@ -458,14 +447,12 @@
         }
         .card-frame h2 { color: #ffffff !important; }
 
-        /* --- 12. Gallery Card (Pastel Sky Blue) --- */
         .card-gallery {
             background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%) !important;
             color: #0369a1 !important;
         }
         .card-gallery h2 { color: #0c4a6e !important; }
 
-        /* --- 13. Location Card (Emerald Mint) --- */
         .card-location {
             background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
             color: #ecfdf5 !important;
@@ -483,7 +470,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* --- 14. Bava's Life Thoughts Card (Deep Obsidian & Slate Silver) --- */
         .card-life-thoughts {
             background: linear-gradient(135deg, #1f2937 0%, #111827 100%) !important;
             color: #e5e7eb !important;
@@ -491,7 +477,6 @@
         }
         .card-life-thoughts h2 { color: #9ca3af !important; }
 
-        /* --- 15. Deep Love Letter Card (Amethyst Royal Purple) --- */
         .card-heart {
             background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%) !important;
             color: #f3e8ff !important;
@@ -516,24 +501,24 @@
         <p>Click here to read our special 6 months journey post ✨</p>
     </div>
 
-    <!-- Gift Section with Fixed Direct Video Button -->
+    <!-- Gift Section Triggering In-Page Modal -->
     <div class="gift-section">
         <h2 class="gift-title">🎁 Gift for Bangaram</h2>
-        <a href="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/f7fb992e-a16a-4d99-bbca-1b1b5ef5b936.mov" target="_blank" class="video-btn">
+        <button onclick="openVideoModal()" class="video-btn" style="border:none; cursor:pointer;">
             🎥 Watch Our Video ❤️
-        </a>
+        </button>
     </div>
 
     <h1 style="color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.2);">💜 Hi Bangaram</h1>
     <p style="color: white; opacity: 0.9;">Welcome to our world ❤️</p>
 
-    <!-- Day Counter Card Section (Soft Pearl) -->
+    <!-- Day Counter Card Section -->
     <div class="card card-days">
         <h2>To My Bangaram, Lahari ❤️</h2>
         <p id="days" style="margin: 0;"></p>
     </div>
 
-    <!-- Letter & Cycle Tracker Section (Lavender Secret) -->
+    <!-- Letter & Cycle Tracker Section -->
     <div class="card card-letter">
         <h2>💌 My First Letter</h2>
         <p style="opacity: 0.95;">
@@ -548,7 +533,7 @@
         </div>
     </div>
 
-    <!-- Maybe This Is What Destiny Means Card Section (Divine Saffron Maroon) -->
+    <!-- Destiny Card Section -->
     <div class="card card-destiny">
         <h2>✨ Maybe This Is What Destiny Means… ❤️🕉️</h2>
 
@@ -645,7 +630,7 @@
         </p>
     </div>
 
-    <!-- Gorintaku Card Section (Deep Mehendi Crimson) -->
+    <!-- Gorintaku Card Section -->
     <div class="card card-gorintaku">
         <h2>🌿 Bangaram ❤️</h2>
         <div style="text-align: center; margin-bottom: 20px;">
@@ -668,7 +653,7 @@
         </p>
     </div>
 
-    <!-- Bava's Promise Card Section (Twilight Lavender & Velvet Amethyst) -->
+    <!-- Bava's Promise Card Section -->
     <div class="card card-bavas-promise">
         <h2>🛡️ Bava's Promise: Nenu Unnanu</h2>
         <p style="text-align:justify;line-height:1.9; font-size: 16px;">
@@ -690,7 +675,7 @@
         </p>
     </div>
 
-    <!-- Artist Card Section (Dreamy Deep Indigo) -->
+    <!-- Artist Card Section -->
     <div class="card card-artist">
         <h2>🎨 The Artist Behind the Canvas</h2>
         <div style="text-align: center; margin-bottom: 20px;">
@@ -709,7 +694,7 @@
         </p>
     </div>
 
-    <!-- Athamma Love Card Section (Warm Golden Amber) -->
+    <!-- Athamma Love Card Section -->
     <div class="card card-athamma">
         <h2>❤️ Athamma Love</h2>
         <p style="text-align:justify;line-height:1.9;">
@@ -733,7 +718,7 @@
         </p>
     </div>
 
-    <!-- Two Worlds, One Frame Section (Soft Sunset Rose) -->
+    <!-- Two Worlds, One Frame Section -->
     <div class="card card-twoworlds">
         <h2>📸 Two Worlds, One Frame</h2>
         
@@ -758,7 +743,7 @@
         </p>
     </div>
 
-    <!-- Amma's Word & My Promise Section (Midnight Emerald Teal) -->
+    <!-- Amma's Word & My Promise Section -->
     <div class="card card-promise">
         <h2>✨ Amma's Word & My Promise</h2>
         <p style="text-align:justify;line-height:1.9;">
@@ -766,7 +751,7 @@
             <br><br>
             Ee photo taruvatha na hrudayam lo inkoka unforgettable moment jarigindi. Amma natho oka mata annappudu naku oka second goosebumps vachayi. Amma navvuthu, chala prema tho, “Eppudu na kodalni intiki thesukosthav ra?” ani adigindi. Aa okka question lo entha prema undo, entha aasa undo, entha accept chesindo naku ardham ayyindi. Aa mata vinnappudu nenu silent ga unna… kani na manasu lo matram oka promise chesukunna. Ela aina sare… enni kashtalu vachina sare… aa mata ni nenu tappakunda nijam chestha.
             <br><br>
-            Bangaram… nijam cheppali ante, amma ki nuvvu ante chala ishtam. Kodalu ani maatladithe aavida kallallo kanipinche aanandam chusthe naaku chala emotional ga anipisthundi. Nuvvu gurinchi cheppina prathi sari aavida face lo oka navvu untundi. Ninnu kalisina tharwataha aa ishtam inka ekkuva ayyindi. Nuvvu maatladina vidhanam, nuvvu chupinche maryadha, prema, simplicity… ivanni aavidani chala touch chesayi. Amma ninnu kodalu ga kaadu Bangaram… intlo oka ammayi laga, tana sontha kuthuru laga chusthundani naku clear ga ardham ayyindi.
+            Bangaram… nijam cheppali ante, amma ki nuvvu ante chala ishtam. Kodalu ani maatladithe aavida kallallo kanipinche aanandam chusthe naaku chala emotional ga anipisthundi. Nuvvu gurinchi cheppina prathi sari aavidani face lo oka navvu untundi. Ninnu kalisina tharwataha aa ishtam inka ekkuva ayyindi. Nuvvu maatladina vidhanam, nuvvu chupinche maryadha, prema, simplicity… ivanni aavidani chala touch chesayi. Amma ninnu kodalu ga kaadu Bangaram… intlo oka ammayi laga, tana sontha kuthuru laga chusthundani naku clear ga ardham ayyindi.
             <br><br>
             Nenu chinnappati nundi amma kosam chala kalalu chusanu. Kani ee roju na biggest dream enti ante… oka roju ninnu amma pakkana chusi, aavida ninnu “maa kodalu” ani pilavadam. Aa pilupu vinadaniki nenu entha wait chesthunano nake telusu. Aa roju vaste, adi na life lo biggest achievement untundi. Money, success, status… ivanni okavaipu. Amma santhosham, nuvvu santhosham… avi okavaipu.
             <br><br>
@@ -780,7 +765,7 @@
         </p>
     </div>
 
-    <!-- Our First Restaurant Together Section (Warm Candlelight Amber & Velvet Rose) -->
+    <!-- Our First Restaurant Together Section -->
     <div class="card card-restaurant">
         <h2>🍽️ Our First Restaurant Together… ❤️</h2>
         
@@ -888,7 +873,7 @@
         </p>
     </div>
 
-    <!-- My First Photo Frame Section (Warm Gold & Wooden Rose) -->
+    <!-- My First Photo Frame Section -->
     <div class="card card-frame">
         <h2>🖼️ My First Photo Frame… ❤️</h2>
         <p style="text-align:justify;line-height:1.9;">
@@ -962,7 +947,7 @@
         </p>
     </div>
 
-    <!-- Gallery Section (Pastel Sky Blue) -->
+    <!-- Gallery Section -->
     <div class="card card-gallery">
         <h2>📸 Our Beautiful Memories</h2>
         <div class="gallery">
@@ -975,7 +960,7 @@
         </div>
     </div>
 
-    <!-- Location Card Section (Emerald Mint) -->
+    <!-- Location Card Section -->
     <div class="card card-location">
         <h2>📍 Our First Kiss ❤️</h2>
         <p style="font-size: 18px; font-weight: 500;">17.793139, 83.389763</p>
@@ -984,7 +969,7 @@
         </a>
     </div>
 
-    <!-- Bava's Life Thoughts Card Section (Deep Obsidian & Slate Silver) -->
+    <!-- Bava's Life Thoughts Card Section -->
     <div class="card card-life-thoughts">
         <h2>🍂 Bava's Words: Life Thoughts</h2>
         <p style="text-align:justify;line-height:1.9; font-size: 16px;">
@@ -1044,7 +1029,7 @@
         </p>
     </div>
 
-    <!-- Telugu Love Letter Card Section (Amethyst Royal Purple) -->
+    <!-- Telugu Love Letter Card Section -->
     <div class="card card-heart">
         <h2>📝 A Little Piece of My Heart</h2>
         <p style="text-align:justify;line-height:1.9;">
@@ -1162,6 +1147,17 @@
     </div>
 </div>
 
+<!-- IN-PAGE VIDEO PLAYER MODAL -->
+<div id="videoModal" class="modal-overlay" style="display:none; background-color: rgba(0,0,0,0.95); z-index: 10001;">
+    <button class="modal-close-btn" onclick="closeVideoModal()">✕</button>
+    <div style="display:flex; justify-content:center; align-items:center; height:100vh; padding:20px;">
+        <video id="myVideo" controls playsinline webkit-playsinline style="max-width:100%; max-height:80vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8);">
+            <source src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/f7fb992e-a16a-4d99-bbca-1b1b5ef5b936.mov" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </div>
+</div>
+
 <!-- Consolidated JavaScript -->
 <script>
     // ❤️ Days Together Counter
@@ -1209,7 +1205,24 @@
     <small style='opacity: 0.8;'>This is an estimate based on a 28-day cycle.</small>
     `;
 
-    // Modal Control & Particle Effect Logic
+    // --- Video Modal Controls ---
+    function openVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('myVideo');
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        video.play();
+    }
+
+    function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('myVideo');
+        video.pause();
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // --- 6-Months Blog Modal Controls ---
     function openBlogModal() {
         document.getElementById('blogModal').style.display = 'block';
         document.body.style.overflow = 'hidden';
