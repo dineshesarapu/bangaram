@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy 6 Months, Bangaram ❤️</title>
-    <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Noto+Sans+Telugu:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,8 +12,7 @@
             --primary-accent: #ff4b6e;
             --secondary-accent: #ff8fa3;
             --gold-accent: #ffd700;
-            --bg-overlay: rgba(10, 5, 12, 0.72);
-            --card-bg: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(15, 8, 20, 0.78);
             --card-border: rgba(255, 255, 255, 0.18);
             --text-color: #f8f9fa;
         }
@@ -35,7 +33,7 @@
             line-height: 1.8;
         }
 
-        /* Dynamic Background Slideshow with Raw Image Links */
+        /* Fixed Background Container */
         .bg-slideshow {
             position: fixed;
             top: 0;
@@ -53,45 +51,42 @@
             height: 100%;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             opacity: 0;
-            animation: slideAnimation 16s infinite ease-in-out;
+            animation: slideAnimation 14s infinite ease-in-out;
             transform: scale(1.05);
         }
 
         .slide:nth-child(1) {
-            /* Raw github media link for IMG_8297 */
             background-image: url('https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8297.jpeg');
             animation-delay: 0s;
         }
 
         .slide:nth-child(2) {
-            /* Raw github media link for IMG_8244 */
             background-image: url('https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8244.jpeg');
-            animation-delay: 8s;
+            animation-delay: 7s;
         }
 
         @keyframes slideAnimation {
             0% { opacity: 0; transform: scale(1.05); }
-            10% { opacity: 1; }
-            45% { opacity: 1; transform: scale(1); }
-            55% { opacity: 0; transform: scale(1.03); }
+            15% { opacity: 1; }
+            50% { opacity: 1; transform: scale(1); }
+            65% { opacity: 0; transform: scale(1.02); }
             100% { opacity: 0; }
         }
 
-        /* Overlay for legibility */
         .bg-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: radial-gradient(circle at center, rgba(15, 8, 20, 0.5) 0%, rgba(5, 2, 8, 0.88) 100%);
+            background: radial-gradient(circle at center, rgba(12, 6, 18, 0.55) 0%, rgba(5, 2, 8, 0.88) 100%);
             z-index: -1;
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
         }
 
-        /* Floating particles */
         #heart-particles {
             position: fixed;
             top: 0;
@@ -123,7 +118,6 @@
             }
         }
 
-        /* Main Container */
         .wrapper {
             max-width: 800px;
             margin: 0 auto;
@@ -132,21 +126,20 @@
             z-index: 1;
         }
 
-        /* Glassmorphic Post Container */
+        /* Single Unified Container */
         .blog-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 24px;
             padding: 45px 35px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
         }
 
-        /* Header */
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             padding-bottom: 25px;
         }
@@ -180,15 +173,13 @@
             font-weight: 600;
         }
 
-        /* Blog Content */
         .content {
             font-size: 1.08rem;
             font-weight: 300;
-            letter-spacing: 0.2px;
         }
 
         p {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .highlight-text {
@@ -222,28 +213,10 @@
             font-size: 0.9rem;
         }
 
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--secondary-accent), transparent);
-            margin: 35px 0;
-            opacity: 0.5;
-        }
-
-        /* Romantic Quote Boxes */
-        .quote-box {
-            background: rgba(255, 75, 110, 0.1);
-            border-left: 4px solid var(--primary-accent);
-            padding: 18px 22px;
-            margin: 25px 0;
-            border-radius: 0 12px 12px 0;
-            font-style: italic;
-        }
-
-        /* Footer / Sign-off */
         .sign-off {
             text-align: center;
             margin-top: 40px;
-            padding-top: 20px;
+            padding-top: 25px;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
 
@@ -258,10 +231,9 @@
             font-family: 'Caveat', cursive;
             font-size: 1.8rem;
             color: var(--gold-accent);
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
-        /* Responsive Adjustments */
         @media (max-width: 600px) {
             .blog-card {
                 padding: 25px 20px;
@@ -279,33 +251,24 @@
             .content {
                 font-size: 1rem;
             }
-
-            ul li {
-                font-size: 0.98rem;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Background Image Slideshow Layer -->
     <div class="bg-slideshow">
         <div class="slide"></div>
         <div class="slide"></div>
     </div>
 
-    <!-- Dark Overlay Layer -->
     <div class="bg-overlay"></div>
-
-    <!-- Floating Heart Particles Layer -->
     <div id="heart-particles"></div>
 
-    <!-- Content Wrapper -->
     <div class="wrapper">
         <article class="blog-card">
             
             <header>
-                <span class="badge">Half Year Anniversary</span>
+                <span class="badge">6 Months Anniversary</span>
                 <h1>Six Months… Yet It Feels Like I’ve Known You Forever. ❤️</h1>
                 <div class="sub-heading">Bangaram…</div>
             </header>
@@ -315,15 +278,11 @@
                 <p>Aru nelalu…</p>
                 <p>Cheppadaniki chinna number.</p>
                 <p>Kani aa aru nelallo nenu jeevitham motham gurthupettukune gnapakalu sampadinchanu.</p>
-
-                <div class="quote-box">
-                    Konni rojulu navvinchayi…<br>
-                    Konni rojulu edpinchayi…<br>
-                    Konni rojulu kopam theppinchayi…<br>
-                    Konni rojulu nammakam penchayi…<br>
-                    <span class="gold-text">Kani oka roju kuda ninnu takkuvaga preminchaledu.</span>
-                </div>
-
+                <p>Konni rojulu navvinchayi…</p>
+                <p>Konni rojulu edpinchayi…</p>
+                <p>Konni rojulu kopam theppinchayi…</p>
+                <p>Konni rojulu nammakam penchayi…</p>
+                <p class="gold-text">Kani oka roju kuda ninnu takkuvaga preminchaledu.</p>
                 <p>Ninnu kalisaka naaku ardham ayindi…</p>
                 <p>Prema ante pedda pedda gifts kaadhu… pedda pedda maatalu kaadhu… <strong class="highlight-text">chinna chinna kshanalu</strong>.</p>
 
@@ -340,53 +299,53 @@
 
                 <p>Ivanni choosthe ardham avuthundi…</p>
                 <p>Mana prema pedda sanghatanalatho kaadhu… <strong>Chinna chinna gnapakalatho peruguthundani.</strong></p>
-
-                <div class="section-divider"></div>
-
                 <p>Nijam cheppalante…</p>
                 <p>Ee aru nelallo nuvvu naaku oka girlfriend maatrame kaaledu.</p>
-                <p class="highlight-text">Naa best friend ayyavu. Naa dhairyam ayyavu. Naa navvu ayyavu.</p>
-
-                <p>Konni rojulu nannu baadha pettavu… Aa baadha nenu eppatiki marchipolenu.</p>
-                <p>Kani… Aa baadha kanna nuvvu naaku ichina santhosham chala ekkuva.</p>
-                <p>Anduke… Aa baadhani kuda oka gnapakam la dachukunna.</p>
-                <p>Endhukante… Adhi kuda mana journey lone oka page.</p>
-
-                <div class="section-divider"></div>
-
+                <p class="highlight-text">Naa best friend ayyavu.</p>
+                <p class="highlight-text">Naa dhairyam ayyavu.</p>
+                <p class="highlight-text">Naa navvu ayyavu.</p>
+                <p>Konni rojulu nannu baadha pettavu…</p>
+                <p>Aa baadha nenu eppatiki marchipolenu.</p>
+                <p>Kani…</p>
+                <p>Aa baadha kanna nuvvu naaku ichina santhosham chala ekkuva.</p>
+                <p>Anduke…</p>
+                <p>Aa baadhani kuda oka gnapakam la dachukunna.</p>
+                <p>Endhukante…</p>
+                <p>Adhi kuda mana journey lone oka page.</p>
                 <p class="gold-text">Nuvvu nannu marchesthunnaavu Bangaram…</p>
                 <p>Mundu nenu kalalu kannevadini. Ippudu mana future gurinchi kalalu kanthunnanu.</p>
                 <p>Mundu nenu naa gurinchi alochinchevadini. Ippudu mundhu nee gurinche alochisthanu.</p>
                 <p>Mundu nenu naa room lo naa photo frame pettukoledu. Ee roju naa room lo unna modati frame… <strong>Naa Bangaram.</strong></p>
                 <p>Mundu Sai Baba ki namaskaram cheyyadam kuda manesanu. Ee roju… Mana iddarini tana sannidhi daggaraki pilichina aa Baba meedha malli nammakam puttindi.</p>
-
-                <div class="quote-box">
-                    Konni sarlu bhayam vesthundi… Future gurinchi. Paristhithula gurinchi.<br>
-                    Kani aa bhayam vachina prathi sari… Oka maata gurthosthundi.<br>
-                    Mana kalisina roju kuda manam plan cheyyaledu. Adhi jarigindi.<br>
-                    Appudu… <strong>Mana future ni kuda ayane rayagaladu ani nammutanu.</strong>
-                </div>
-
-                <p>Bangaram… Thank you.</p>
-                <p>Nannu ardham chesukune prayatnam chesinanduku.<br>
-                Naa allari bharinchinanduku.<br>
-                Naa overthinking bharinchinanduku.<br>
-                Naa prema ni oppukunnanduku.</p>
-
+                <p>Konni sarlu bhayam vesthundi…</p>
+                <p>Future gurinchi.</p>
+                <p>Paristhithula gurinchi.</p>
+                <p>Kani aa bhayam vachina prathi sari… Oka maata gurthosthundi.</p>
+                <p>Mana kalisina roju kuda manam plan cheyyaledu. Adhi jarigindi.</p>
+                <p>Appudu…</p>
+                <p><strong>Mana future ni kuda ayane rayagaladu ani nammutanu.</strong></p>
+                <p>Bangaram…</p>
+                <p>Thank you.</p>
+                <p>Nannu ardham chesukune prayatnam chesinanduku.</p>
+                <p>Naa allari bharinchinanduku.</p>
+                <p>Naa overthinking bharinchinanduku.</p>
+                <p>Naa prema ni oppukunnanduku.</p>
                 <p>Ee aru nelallo naaku ichina…</p>
                 <p class="highlight-text">Prathi navvu… Prathi memory… Prathi photo… Prathi call… Prathi message… Prathi “Bava…”</p>
                 <p>Naa jeevitham lo atyanta viluvaina bahumathi.</p>
-
-                <p>Samayam gadichipothundi… Photos old aipothayi… Messages delete aipovachu…</p>
-                <p>Kani… <strong>Mana iddaram kalisi create chesina ee gnapakalu maatram eppatiki mana hrudayallo brathikuntayi.</strong></p>
+                <p>Samayam gadichipothundi…</p>
+                <p>Photos old aipothayi…</p>
+                <p>Messages delete aipovachu…</p>
+                <p>Kani…</p>
+                <p><strong>Mana iddaram kalisi create chesina ee gnapakalu maatram eppatiki mana hrudayallo brathikuntayi.</strong></p>
             </div>
 
             <footer class="sign-off">
                 <h2>Happy 6 Months, Bangaram. ❤️</h2>
                 <p>Ee aru nelallo ninnu preminchina vidhanam kanna… Raboye prathi nela, prathi samvatsaram, prathi janmalo inka ekkuvaga preminchali anedhe naa korika.</p>
-                <br>
                 <p>Naa jeevitham lo jarigina ati andamaina coincidence… <strong>nuvvu.</strong></p>
                 <p>Naa jeevitham lo jaragaboye ati andamaina decision… <strong>ninnu eppatiki vadalakunda preminchadam.</strong></p>
+                <p>Happy 6 Months, naa Bangaram.</p>
                 
                 <div class="forever-tag">
                     I Love You. Yesterday. Today. Tomorrow. Forever. ❤️
@@ -396,7 +355,6 @@
         </article>
     </div>
 
-    <!-- Particle Generator Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('heart-particles');
@@ -417,7 +375,6 @@
                 }, 10000);
             }
 
-            // Generate particles periodically
             setInterval(createParticle, 400);
         });
     </script>
