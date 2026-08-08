@@ -410,6 +410,38 @@
         }
         .card-athamma h2 { color: #ffffff !important; }
 
+        /* Athamma Vanta Card */
+        .card-athamma-vanta {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+            color: #ffffff !important;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        .card-athamma-vanta h2 {
+            color: #ffffff !important;
+            margin-bottom: 10px;
+        }
+        .vanta-read-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #b45309 !important;
+            font-weight: bold;
+            padding: 12px 26px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .vanta-read-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #fff8f0;
+        }
+
         .card-twoworlds {
             background: linear-gradient(135deg, #fe019a 0%, #fe7bb0 100%) !important;
             color: #ffffff !important;
@@ -531,6 +563,17 @@
             <h2>🌸 Bangaram's Cycle Tracker</h2>
             <p id="cycleInfo"></p>
         </div>
+    </div>
+
+    <!-- NEW BLOG CARD: Athamma Vanta Chinamma Prema -->
+    <div class="card card-athamma-vanta">
+        <h2>🍲 Athamma Vanta Chinamma Prema ❤️</h2>
+        <p style="opacity: 0.95; margin-top: 10px;">
+            Mee chethi chicken pulusu chaaaala ante chaaaala baagundi Athamma...
+        </p>
+        <button class="vanta-read-btn" onclick="openVantaModal()">
+            📖 Read Full Letter ❤️
+        </button>
     </div>
 
     <!-- Destiny Card Section -->
@@ -1046,6 +1089,112 @@
 
 </div>
 
+<!-- FULLSCREEN MODAL OVERLAY FOR ATHAMMA VANTA CHINAMMA PREMA BLOG -->
+<div id="vantaModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeVantaModal()">✕</button>
+
+    <div class="modal-bg-slideshow">
+        <div class="modal-slide"></div>
+        <div class="modal-slide"></div>
+    </div>
+    <div class="modal-bg-overlay"></div>
+
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Heartfelt Letter</span>
+                <h1>athamma vanta chinamma prema ❤️</h1>
+                <div class="modal-sub-heading">Athamma…</div>
+            </header>
+
+            <div class="modal-content" style="text-align: justify; line-height: 2;">
+                <p>Mee chethi chicken pulusu chaaaala ante chaaaala baagundi. ❤️</p>
+                <p>Kani nijam cheppalante… aa ruchikante aa vanta venaka unna prema na manasuni ekkuvaga thakindi.</p>
+
+                <p>Naa chinnappati nundi amma working mom avvadam valla, amma chethi tho chesina ruchikaramaina vanta tinna rojulu chala thakkuva. Anduke evaraina prema tho vandi petti tinipisthe aa feeling naaku chala special ga anipisthundi.</p>
+
+                <p>Kani aa roju meeru chesina chicken pulusu tinappudu enduko…</p>
+
+                <p class="modal-highlight">Naa manasuni evaro prema tho hattukunna feeling vachindi.</p>
+
+                <p>Aa chicken pulusu lo kevalam ruchi kaadhu…</p>
+
+                <p class="modal-gold">Oka intlo manishi kosam vandi pettina prema undi.</p>
+
+                <p>Chala rojulu nundi naa jeevitham lo chaala vishayalu nene handle cheskuntu vachanu. Evariki dooramga, andariki dooramga, enni kashtalu vachina nene bharisthu… ishtapadi brathakadaniki prayatninchanu.</p>
+
+                <p>Konni saarlu entha strong ga unna…</p>
+
+                <p>“Naa pakkana evaraina unte baagundedi…” ani anipinche moments kuda unnayi.</p>
+
+                <p>Kani ippudu…</p>
+
+                <p>Nenu eppudu ontariga anipinchina, em kashtam vachina, naa Bangaram naa daggaraki vachi…</p>
+
+                <p class="modal-highlight">“Bava… nenu unna.” ani cheppinattu anipisthundi.</p>
+
+                <p>Nenu intini miss ayithe…</p>
+                <p class="modal-gold">Athamma chethi special vanta dorukutundi.</p>
+
+                <p>Ammani miss ayithe…</p>
+                <p class="modal-gold">Amma la naa Bangaram chupinche prema dorukutundi.</p>
+
+                <p>Nenu daari thappithe…</p>
+                <p>Naa Bangaram nanna la karra pattukoni daari chupisthundi. 😄❤️</p>
+
+                <p>Kani ee madhya naa Bangaram na meedha chupisthunna care…</p>
+                <p>Adi maatram naaku chala kothaga anipisthundi.</p>
+
+                <p>Naa jeevitham lo evaru nannu ala chusukunna feeling naaku eppudu raledu.</p>
+
+                <p>Anduke konni sarlu…</p>
+                <p>“Nijanga nenu inta care ki arhuda?” ani kuda anipisthundi.</p>
+
+                <p>Adi entha kothaga undho…</p>
+                <p>Anthe andamga undi.</p>
+
+                <p>Swargam ante ekkado paina undadu emo…</p>
+                <p>Manalni manamga accept chese vaallu pakkana unte…</p>
+                <p>Mana aakali gurthupettukoni vandi pette vaallu unte…</p>
+                <p>Mana baadha cheppakundane ardham chesukune vaallu unte…</p>
+                <p class="modal-gold">Ade swargam emo.</p>
+
+                <p>Athamma…</p>
+                <p>Mee chicken pulusu tinna aa roju naaku oka vishayam ardham ayyindi.</p>
+
+                <p>Naa life lo nenu edurukunna kashtalu entha unna…</p>
+                <p>Ippudu naa venaka nilabade manushulu unnaru.</p>
+                <p class="modal-highlight">Naa Bangaram undi.</p>
+                <p class="modal-highlight">Tana prema undi.</p>
+                <p class="modal-highlight">Tana amma laanti care undi.</p>
+                <p class="modal-highlight">Mee chethi vanta lo unna aa prema undi.</p>
+
+                <p>Anduke ippudu naaku oka kotha dhairyam vachindi…</p>
+                <p class="modal-gold" style="font-size: 1.2rem;">“Entha pedda kashtam vachina sare… nenu gelustha.”</p>
+
+                <p>Endhukante ippudu nenu kevalam naa kosam brathakadam kaadhu…</p>
+                <p>Nannu intha premaga chusukune vaalla kosam kuda gelavali.</p>
+
+                <p>Aa roju chicken pulusu tinna tarvatha naa kadupu nindindho ledo teliyadu…</p>
+                <p>Kani…</p>
+                <p class="modal-highlight">Naa manasu maatram chala rojula tarvatha poorthiga nindindi. ❤️</p>
+
+                <p>Bagundiiii Athamma… chaaaala baagundi.</p>
+                <p>Chicken pulusu kanna…</p>
+                <p class="modal-gold">Daanilo meeru pettina prema inka baagundi. ❤️</p>
+            </div>
+
+            <footer class="modal-sign-off">
+                <h2>Thank you, Athamma. ❤️</h2>
+                <p>Naa Bangaram ni naaku ichinanduku maatrame kaadhu…</p>
+                <p class="modal-forever-tag">
+                    Naa jeevitham lo naaku teliyakunda oka “illu” ane feeling ni kuda ichinanduku. ❤️
+                </div>
+            </footer>
+        </article>
+    </div>
+</div>
+
 <!-- FULLSCREEN MODAL OVERLAY FOR THE 6 MONTHS BLOG -->
 <div id="blogModal" class="modal-overlay">
     <button class="modal-close-btn" onclick="closeBlogModal()">✕</button>
@@ -1233,13 +1382,24 @@
         document.body.style.overflow = 'auto';
     }
 
+    // --- Athamma Vanta Blog Modal Controls ---
+    function openVantaModal() {
+        document.getElementById('vantaModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVantaModal() {
+        document.getElementById('vantaModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
     // Modal Floating Hearts
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('modal-heart-particles');
         const particleIcons = ['❤️', '💖', '✨', '💕', '🌸'];
 
         function createParticle() {
-            if (document.getElementById('blogModal').style.display === 'block') {
+            if (document.getElementById('blogModal').style.display === 'block' || document.getElementById('vantaModal').style.display === 'block') {
                 const particle = document.createElement('div');
                 particle.className = 'modal-particle';
                 particle.innerHTML = particleIcons[Math.floor(Math.random() * particleIcons.length)];
