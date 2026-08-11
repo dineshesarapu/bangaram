@@ -82,6 +82,43 @@
             font-weight: 300;
         }
 
+        /* --- NEW TOP BLOG BANNER / CARD --- */
+        .card-new-story {
+            background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%) !important;
+            color: #ffffff !important;
+            text-align: center;
+            padding: 22px 20px;
+            border-radius: 18px !important;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(255, 8, 68, 0.35) !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        }
+        .card-new-story h2 {
+            color: #ffffff !important;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+        .new-blog-read-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #ff0844 !important;
+            font-weight: bold;
+            padding: 12px 26px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .new-blog-read-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #fff5f6;
+        }
+
         /* --- Gift Title & Video Button Styling --- */
         .gift-section {
             text-align: center;
@@ -531,6 +568,17 @@
     <div class="anniversary-banner" onclick="openBlogModal()">
         <h2>🎉 Happy 6 Months Anniversary Bangaram ❤️</h2>
         <p>Click here to read our special 6 months journey post ✨</p>
+    </div>
+
+    <!-- NEW BLOG CARD & BUTTON AT TOP -->
+    <div class="card card-new-story">
+        <h2>✨ Our New Chapter: Forever & Always ❤️</h2>
+        <p style="opacity: 0.95; margin-top: 6px; font-size: 15px;">
+            A special story dedicated to the most beautiful person in my life...
+        </p>
+        <button class="new-blog-read-btn" onclick="openNewBlogModal()">
+            📖 Read New Blog Post ❤️
+        </button>
     </div>
 
     <!-- Gift Section Triggering In-Page Modal -->
@@ -1089,6 +1137,50 @@
 
 </div>
 
+<!-- FULLSCREEN MODAL OVERLAY FOR NEW TOP BLOG POST -->
+<div id="newBlogModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeNewBlogModal()">✕</button>
+
+    <div class="modal-bg-slideshow">
+        <div class="modal-slide"></div>
+        <div class="modal-slide"></div>
+    </div>
+    <div class="modal-bg-overlay"></div>
+
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">New Love Story</span>
+                <h1>Forever & Always ❤️</h1>
+                <div class="modal-sub-heading">To My Dearest Bangaram…</div>
+            </header>
+
+            <div class="modal-content" style="text-align: justify; line-height: 2;">
+                <p class="modal-highlight">Bangaram… ❤️</p>
+
+                <p>Nee prema naa jeevitham loki vachaka, prathi roju oka andamaina panduga la anipisthundi. Enno gnapakalu, enno chinna chinna anandalu, mana madhya perugutunna ee bandham prathi kshanam nannu inka strong ga marchutondi.</p>
+
+                <p>Nee navvu chusina prathi sari naa manasulo oka kotha aasa, oka kotha dhairyam nindipothundhi. Ee prapancham lo entha allakallolam unna, nee pakkana unte naa manasuki oranthi, prasanthatha labhisthundhi.</p>
+
+                <p class="modal-gold">Mana iddari journey oka andamaina kavyam la sagipothundhi.</p>
+
+                <p>Kashtalu raavocchu, chinna chinna godavalu raavocchu... kani mana madhya unna prema andhi annitikante balamainadhi. Ee Bava nee cheyyi eppatiki vadaladu. Ee janmaki maatrame kaadu, prathi janmaki nuvve naa Bangaram.</p>
+
+                <p class="modal-highlight">Naa jeevitham lo nuvvu unnanthakaalamu nenu world's happiest person ni.</p>
+
+                <p>Thank you for being my constant, my strength, and my absolute everything. I love you endlessly! ❤️</p>
+            </div>
+
+            <footer class="modal-sign-off">
+                <h2>Forever Yours, Bava ❤️</h2>
+                <p class="modal-forever-tag">
+                    Love You Always Bangaram ✨
+                </p>
+            </footer>
+        </article>
+    </div>
+</div>
+
 <!-- FULLSCREEN MODAL OVERLAY FOR ATHAMMA VANTA CHINAMMA PREMA BLOG -->
 <div id="vantaModal" class="modal-overlay">
     <button class="modal-close-btn" onclick="closeVantaModal()">✕</button>
@@ -1189,7 +1281,7 @@
                 <p>Naa Bangaram ni naaku ichinanduku maatrame kaadhu…</p>
                 <p class="modal-forever-tag">
                     Naa jeevitham lo naaku teliyakunda oka “illu” ane feeling ni kuda ichinanduku. ❤️
-                </div>
+                </p>
             </footer>
         </article>
     </div>
@@ -1371,6 +1463,17 @@
         document.body.style.overflow = 'auto';
     }
 
+    // --- New Top Blog Modal Controls ---
+    function openNewBlogModal() {
+        document.getElementById('newBlogModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeNewBlogModal() {
+        document.getElementById('newBlogModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
     // --- 6-Months Blog Modal Controls ---
     function openBlogModal() {
         document.getElementById('blogModal').style.display = 'block';
@@ -1399,7 +1502,11 @@
         const particleIcons = ['❤️', '💖', '✨', '💕', '🌸'];
 
         function createParticle() {
-            if (document.getElementById('blogModal').style.display === 'block' || document.getElementById('vantaModal').style.display === 'block') {
+            if (
+                document.getElementById('blogModal').style.display === 'block' || 
+                document.getElementById('vantaModal').style.display === 'block' ||
+                document.getElementById('newBlogModal').style.display === 'block'
+            ) {
                 const particle = document.createElement('div');
                 particle.className = 'modal-particle';
                 particle.innerHTML = particleIcons[Math.floor(Math.random() * particleIcons.length)];
