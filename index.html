@@ -203,6 +203,9 @@
         .btn-thoughts { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); }
         .btn-heart { background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%); }
         .btn-letter { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); }
+        .btn-cycle { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); }
+        .btn-newletter { background: linear-gradient(135deg, #be185d 0%, #f43f5e 100%); }
+
 
         /* ===== MODAL STYLES ===== */
         .modal-overlay {
@@ -499,7 +502,19 @@
         <button class="page-btn btn-letter" onclick="openModal('letterModal')">
             <span class="emoji">💌</span>
             <span class="title">My First Letter</span>
-            <span class="teaser">+ Cycle Tracker</span>
+            <span class="teaser">Every heartbeat…</span>
+        </button>
+
+        <button class="page-btn btn-cycle" onclick="openModal('cycleModal')">
+            <span class="emoji">🌸</span>
+            <span class="title">Bangaram's Cycle Tracker</span>
+            <span class="teaser">Period Tracker</span>
+        </button>
+
+        <button class="page-btn btn-newletter" onclick="openModal('newLetterModal')">
+            <span class="emoji">💕</span>
+            <span class="title">Naa Lopala Oka Bhaagam</span>
+            <span class="teaser">New Letter ❤️</span>
         </button>
 
         <button class="page-btn btn-swargam" onclick="openModal('swargamModal')">
@@ -507,6 +522,7 @@
             <span class="title">Ninna Nenu Choosina Swargam</span>
             <span class="teaser">Sweet Memories</span>
         </button>
+
 
         <button class="page-btn btn-vanta" onclick="openModal('vantaModal')">
             <span class="emoji">🍲</span>
@@ -597,7 +613,7 @@
 
 <!-- ==================== ALL MODALS ==================== -->
 
-<!-- 1. First Letter + Cycle -->
+<!-- 1. First Letter -->
 <div id="letterModal" class="modal-overlay">
     <button class="modal-close-btn" onclick="closeModal('letterModal')">✕</button>
     <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
@@ -615,10 +631,6 @@
                     This little corner of the internet is only for us.
                     No matter where life takes us, my heart will always find its way back to you.
                 </p>
-                <div style="background:rgba(255,255,255,0.12); border-radius:16px; padding:20px; margin-top:25px;">
-                    <h2 style="color:#ff8fa3; margin-bottom:12px;">🌸 Bangaram's Cycle Tracker</h2>
-                    <p id="cycleInfo"></p>
-                </div>
             </div>
             <footer class="modal-sign-off">
                 <h2>Love you forever ❤️</h2>
@@ -627,7 +639,120 @@
     </div>
 </div>
 
+<!-- Cycle Tracker Modal -->
+<div id="cycleModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('cycleModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Cycle Tracker</span>
+                <h1>🌸 Bangaram's Cycle Tracker</h1>
+                <div class="modal-sub-heading">For my Bangaram ❤️</div>
+            </header>
+            <div class="modal-content" style="text-align:center;">
+                <div style="background:rgba(255,255,255,0.12); border-radius:16px; padding:25px; margin-top:10px;">
+                    <p id="cycleInfo" style="font-size:1.15rem; line-height:1.9;"></p>
+                </div>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Take care, Bangaram ❤️</h2>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- New Letter Modal -->
+<div id="newLetterModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('newLetterModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">New Letter</span>
+                <h1>Naa Bangaram… Naa Lopala Oka Bhaagam ❤️</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8388.jpeg" alt="Bangaram" class="featured-large-img" onerror="this.style.display='none'">
+                
+                <p>Enduko ee madhya Bangaram…</p>
+                <p>Nuvvu naaku daggaraga unnattu kaadhu… naalo okati aipothunnattu anipisthundi.</p>
+                <p>Mundu nuvvu naaku chala daggara ani anipinchedi.</p>
+                <p>Kani ippudu…</p>
+                <p class="modal-highlight">Nuvvu naalo oka bhaagam aipoyavemo anipisthundi.</p>
+                <p>Leda…</p>
+                <p>Nanne nee lopala kalipeskunnavemo.</p>
+                <p>Nee maatalu…</p>
+                <p>Nee pogaru…</p>
+                <p>Nee allari…</p>
+                <p>Ivanni ippudu naaku chala garvanga anipisthunnayi.</p>
+                <p>Ninnu chusthe…</p>
+                <p>“Idi naa Bangaram” ani cheppukovalanipisthundi.</p>
+                <p>Nuvvu entha kashtam vachina navvuthu munduku vellipothav.</p>
+                <p>Kani ade Bangaram…</p>
+                <p>Bava konchem dooramga velthunte maatram chinna pillala edupu mokham peduthundi. 😄❤️</p>
+                <p>Enduko…</p>
+                <p>Adi chusthe naaku chala mudduga anipisthundi.</p>
+                <p>Bahusha…</p>
+                <p>Nuvvu kuda nannu nee lopala kalupukunnavemo.</p>
+                <p>Bahusha anduke Bava dooramga velthunte nee kallallo aa chinna baadha kanipisthundemo.</p>
+                <p class="modal-gold">Naa muddula Bangaram…</p>
+                <p class="modal-gold">Naa Bangaru Konda…</p>
+                <p>Nuvvu naaku ippudu oka person maatrame kaadhu.</p>
+                <p>Naa jeevitham lo naatho kalisi nadiche oka bhaagam.</p>
+                <p>Nee santhosham naaku santhosham.</p>
+                <p>Nee baadha naaku baadha.</p>
+                <p>Nee gelupu naaku garvam.</p>
+                <p>Nee bhayam naaku dhairyam ivvalanipinche reason.</p>
+                <p>Nee navvu chusthe…</p>
+                <p>Nenu inkem adagakunda happy aipotha.</p>
+                <p>Anduke naa pichi korika okkate…</p>
+                <p class="modal-highlight">Ee roju nuvvu ela unnava… alane naa pakkana 60 years marriage anniversary roju kuda undali. ❤️</p>
+                <p>Appatiki mana juttu tellaga aipoyina…</p>
+                <p>Mana nadaka slow aipoyina…</p>
+                <p>Mana faces lo ee roju unna youth undakapoyina…</p>
+                <p>Nuvvu Bava ki ade Bangaram ga undali.</p>
+                <p>Em vishayam aina…</p>
+                <p>Enta chinna matter aina…</p>
+                <p>Enta pedda problem aina…</p>
+                <p>“Bava ki cheppali” ani anipinchela ninnu chuskovali.</p>
+                <p>Nee manasulo unna prathi maata…</p>
+                <p>Nee bhayam…</p>
+                <p>Nee kopam…</p>
+                <p>Nee allari…</p>
+                <p>Nee korikalu…</p>
+                <p>Anni Bava tho dhairyamga cheppagalige ammayiga undali.</p>
+                <p>Nuvvu naa pakkana unte…</p>
+                <p>Nenu kuda prapancham motham edurukogalanu ane dhairyam naaku untundi.</p>
+                <p>Anduke…</p>
+                <p>Naa Bangaram…</p>
+                <p>Nuvvu naalo oka bhaagam aipoyavo…</p>
+                <p>Leda nannu nee lopala kalipeskunnavo…</p>
+                <p>Naaku teliyadu.</p>
+                <p>Kani okati maatram telusu…</p>
+                <p class="modal-gold">Ee Bava ki ippudu “nenu” ane maata kanna “manam” ane maata chala ishtam. ❤️</p>
+                <p>Nuvvu navvuthu undali.</p>
+                <p>Nuvvu dhairyamga undali.</p>
+                <p>Nuvvu edaina naatho cheppagalagali.</p>
+                <p>Nuvvu eppudu…</p>
+                <p>“Bava unnaadu” ane nammakam tho undali.</p>
+                <p>Ee pichi Bava korika anthe…</p>
+                <p>Ee janma motham kaadhu Bangaram… mana 60th anniversary roju kuda nee cheyyi pattukoni, “Nuvvu appudu kuda na Bangaramve” ani cheppali. ❤️</p>
+                <p class="modal-gold" style="font-size:1.3rem; text-align:center; margin-top:25px;">Naa muddula Bangarammm…<br>Naa Bangaru Konda…<br>Nuvvu naalo kalisipoyav. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>I Love You, Bangaram ❤️</h2>
+                <p class="modal-forever-tag">Nuvvu naalo oka bhaagam ❤️</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
 <!-- 2. Swargam Modal -->
+
 <div id="swargamModal" class="modal-overlay">
     <button class="modal-close-btn" onclick="closeModal('swargamModal')">✕</button>
     <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
@@ -1335,7 +1460,7 @@
         "Together since <b>5 February 2026</b><br><br><span style='font-size:24px; font-weight:bold;'>" + days + " Beautiful Days ❤️</span>";
 
     // Cycle Tracker
-    const lastPeriod = new Date("2026-07-13");
+    const lastPeriod = new Date("2026-08-14");
     const cycleLength = 28;
     let nextPeriod = new Date(lastPeriod);
     while (nextPeriod <= today) {
@@ -1345,7 +1470,7 @@
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById("cycleInfo").innerHTML = `
         <b>🌸 Last Period</b><br>
-        13 July 2026
+        14 August 2026
         <br><br>
         <b>📅 Estimated Next Period</b><br>
         ${nextPeriod.toLocaleDateString('en-US', options)}
@@ -1355,6 +1480,7 @@
         <br><br>
         <small style='opacity:0.8;'>This is an estimate based on a 28-day cycle.</small>
     `;
+
 
     // Generic Modal open/close
     function openModal(id) {
