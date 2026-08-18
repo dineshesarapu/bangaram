@@ -422,14 +422,14 @@
             margin-bottom: 10px;
         }
 
-        /* Bava Manasuloni Maata Card */
-        .card-bava-manasu {
+        /* Ninna Swargam Card */
+        .card-swargam {
             background: linear-gradient(135deg, #e63946 0%, #901a1e 100%) !important;
             color: #ffffff !important;
             text-align: center;
             padding: 25px 20px;
         }
-        .card-bava-manasu h2 {
+        .card-swargam h2 {
             color: #ffffff !important;
             margin-bottom: 10px;
         }
@@ -455,7 +455,7 @@
             background: #fff8f0;
         }
 
-        .bava-manasu-read-btn {
+        .swargam-read-btn {
             display: inline-block;
             background: #ffffff;
             color: #e63946 !important;
@@ -470,7 +470,7 @@
             border: none;
             font-size: 16px;
         }
-        .bava-manasu-read-btn:hover {
+        .swargam-read-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
             background: #fff0f0;
@@ -599,13 +599,13 @@
         </div>
     </div>
 
-    <!-- RENAMED BLOG CARD: Bava Manasuloni Maata -->
-    <div class="card card-bava-manasu">
-        <h2>✨ Bava Manasuloni Maata… ❤️</h2>
+    <!-- NEW BLOG CARD: Ninna Nenu Choosina Swargam -->
+    <div class="card card-swargam">
+        <h2>✨ Ninna Nenu Choosina Swargam… ❤️</h2>
         <p style="opacity: 0.95; margin-top: 10px;">
             Ninna naaku vachina anandam ela untundo maatram nenu eppudu oohinchaledu...
         </p>
-        <button class="bava-manasu-read-btn" onclick="openBavaManasuModal()">
+        <button class="swargam-read-btn" onclick="openSwargamModal()">
             📖 Read Full Post ❤️
         </button>
     </div>
@@ -847,7 +847,7 @@
             <br><br>
             Nenu devudini okkate korukuntunna… mana madhya vachche prathi problem ni manam kalisi datali. Evaraina oppose chesina, situations ela unna, time entha test chesina… nenu oka adugu kuda venakki veyyanu. Endukante idi na prema kosam matrame kaadu… amma kalani nijam cheyyadam kosam kuda.
             <br><br>
-            Bangaram… oka promise. Oka roju amma adigina aa mata nijamavutundi. Aavida eduruchusthunna aa kodalu nuvve avuthav. Nenu aa roju kosam entha kastam aina padatha. Endukante aa roju amma navvu, nee kallallo aanandam… avi rendu kalisi chuse adrustam kante pedda gift na jeevitham lo inkoti undadu.
+            Bangaram… oka promise. Oka roju amma adigina aa mata nijam avutundi. Aavida eduruchusthunna aa kodalu nuvve avuthav. Nenu aa roju kosam entha kastam aina padatha. Endukante aa roju amma navvu, nee kallallo aanandam… avi rendu kalisi chuse adrustam kante pedda gift na jeevitham lo inkoti undadu.
             <br><br>
             Aa roju vachaka… ee photo oka beautiful memory kaadhu. Mana jeevitham mothaniki starting chapter ani cheppukuntam. ❤️
         </p>
@@ -1134,9 +1134,9 @@
 
 </div>
 
-<!-- FULLSCREEN MODAL OVERLAY FOR BAVA MANASULONI MAATA BLOG -->
-<div id="bavaManasuModal" class="modal-overlay">
-    <button class="modal-close-btn" onclick="closeBavaManasuModal()">✕</button>
+<!-- FULLSCREEN MODAL OVERLAY FOR NINNA NENU CHOOSINA SWARGAM BLOG -->
+<div id="swargamModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeSwargamModal()">✕</button>
 
     <div class="modal-bg-slideshow">
         <div class="modal-slide"></div>
@@ -1147,7 +1147,7 @@
     <div class="modal-wrapper">
         <article class="modal-blog-card">
             <header>
-                <span class="modal-badge">Bava Manasuloni Maata</span>
+                <span class="modal-badge">Sweet Memories</span>
                 <h1>Ninna Nenu Choosina Swargam… ❤️</h1>
                 <div class="modal-sub-heading">Bangarammmmm…</div>
             </header>
@@ -1572,14 +1572,14 @@
         document.body.style.overflow = 'auto';
     }
 
-    // --- Bava Manasuloni Maata Blog Modal Controls ---
-    function openBavaManasuModal() {
-        document.getElementById('bavaManasuModal').style.display = 'block';
+    // --- Ninna Swargam Blog Modal Controls ---
+    function openSwargamModal() {
+        document.getElementById('swargamModal').style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
 
-    function closeBavaManasuModal() {
-        document.getElementById('bavaManasuModal').style.display = 'none';
+    function closeSwargamModal() {
+        document.getElementById('swargamModal').style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 
@@ -1588,7 +1588,7 @@
         if (e.key === 'Escape') {
             closeBlogModal();
             closeVantaModal();
-            closeBavaManasuModal();
+            closeSwargamModal();
             closeVideoModal();
         }
     });
@@ -1601,9 +1601,9 @@
         setInterval(() => {
             const isBlogOpen = document.getElementById('blogModal').style.display === 'block';
             const isVantaOpen = document.getElementById('vantaModal').style.display === 'block';
-            const isBavaManasuOpen = document.getElementById('bavaManasuModal').style.display === 'block';
+            const isSwargamOpen = document.getElementById('swargamModal').style.display === 'block';
 
-            if ((isBlogOpen || isVantaOpen || isBavaManasuOpen) && container) {
+            if ((isBlogOpen || isVantaOpen || isSwargamOpen) && container) {
                 const particle = document.createElement('div');
                 particle.className = 'modal-particle';
                 particle.innerHTML = particleIcons[Math.floor(Math.random() * particleIcons.length)];
