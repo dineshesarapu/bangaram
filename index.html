@@ -421,6 +421,19 @@
             color: #ffffff !important;
             margin-bottom: 10px;
         }
+
+        /* Ninna Swargam Card */
+        .card-swargam {
+            background: linear-gradient(135deg, #e63946 0%, #901a1e 100%) !important;
+            color: #ffffff !important;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        .card-swargam h2 {
+            color: #ffffff !important;
+            margin-bottom: 10px;
+        }
+
         .vanta-read-btn {
             display: inline-block;
             background: #ffffff;
@@ -440,6 +453,27 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
             background: #fff8f0;
+        }
+
+        .swargam-read-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #e63946 !important;
+            font-weight: bold;
+            padding: 12px 26px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .swargam-read-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #fff0f0;
         }
 
         .card-twoworlds {
@@ -565,7 +599,18 @@
         </div>
     </div>
 
-    <!-- NEW BLOG CARD: Athamma Vanta Chinamma Prema -->
+    <!-- NEW BLOG CARD: Ninna Nenu Choosina Swargam -->
+    <div class="card card-swargam">
+        <h2>✨ Ninna Nenu Choosina Swargam… ❤️</h2>
+        <p style="opacity: 0.95; margin-top: 10px;">
+            Ninna naaku vachina anandam ela untundo maatram nenu eppudu oohinchaledu...
+        </p>
+        <button class="swargam-read-btn" onclick="openSwargamModal()">
+            📖 Read Full Post ❤️
+        </button>
+    </div>
+
+    <!-- BLOG CARD: Athamma Vanta Chinamma Prema -->
     <div class="card card-athamma-vanta">
         <h2>🍲 Athamma Vanta Chinamma Prema ❤️</h2>
         <p style="opacity: 0.95; margin-top: 10px;">
@@ -994,12 +1039,12 @@
     <div class="card card-gallery">
         <h2>📸 Our Beautiful Memories</h2>
         <div class="gallery">
-            <img src="IMG_7216.png" alt="">
-            <img src="IMG_7232.jpeg" alt="">
-            <img src="IMG_7233.jpeg" alt="">
-            <img src="IMG_7247.jpeg" alt="">
-            <img src="IMG_7248.jpeg" alt="">
-            <img src="IMG_7685.png" alt="">
+            <img src="IMG_7216.png" alt="Memory 1">
+            <img src="IMG_7232.jpeg" alt="Memory 2">
+            <img src="IMG_7233.jpeg" alt="Memory 3">
+            <img src="IMG_7247.jpeg" alt="Memory 4">
+            <img src="IMG_7248.jpeg" alt="Memory 5">
+            <img src="IMG_7685.png" alt="Memory 6">
         </div>
     </div>
 
@@ -1089,6 +1134,139 @@
 
 </div>
 
+<!-- FULLSCREEN MODAL OVERLAY FOR NINNA NENU CHOOSINA SWARGAM BLOG -->
+<div id="swargamModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeSwargamModal()">✕</button>
+
+    <div class="modal-bg-slideshow">
+        <div class="modal-slide"></div>
+        <div class="modal-slide"></div>
+    </div>
+    <div class="modal-bg-overlay"></div>
+
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Sweet Memories</span>
+                <h1>Ninna Nenu Choosina Swargam… ❤️</h1>
+                <div class="modal-sub-heading">Bangarammmmm…</div>
+            </header>
+
+            <div class="modal-content" style="text-align: justify; line-height: 1.9;">
+                <p>Nenu chala rojula nundi anukunevadini…</p>
+
+                <p>Nuvvu naaku entha special o naaku telusu.<br>
+                Manam kalisi gadipina prathi moment entha beautiful o kuda telusu.</p>
+
+                <p>Kani…</p>
+
+                <p class="modal-highlight">Ninna naaku vachina anandam ela untundo maatram nenu eppudu oohinchaledu.</p>
+
+                <p>Life lo chala enjoyments chesanu…</p>
+
+                <p style="padding-left: 15px;">
+                  • Long drives vellanu…<br>
+                  • Bike rides chesanu…<br>
+                  • Chala places chusanu…<br>
+                  • Chala happy moments experience chesanu…
+                </p>
+
+                <p>Kani ninna…</p>
+
+                <p class="modal-gold" style="font-size: 1.2rem;">Nenu modatisari nijanga swargam chusanu.</p>
+
+                <p>Adi oka place kaadhu.</p>
+
+                <p>Adi oka moment kuda kaadhu.</p>
+
+                <p class="modal-highlight">Adi nuvvu nannu poorthiga nee lokam lo kalupukunnav ane feeling.</p>
+
+                <p>Ninna edho teliyani oka prapancham lo unnattu anipinchindi.</p>
+
+                <p>Manam iddaram veru veru manushulam ane feeling kuda oka kshanam ki ledu…</p>
+
+                <p class="modal-gold">“Manam iddaram okkate” ane oka teliyani anubhuthi.</p>
+
+                <p>Nuvvu nannu nee lokam lo ila kalupukunnav ane feeling…</p>
+
+                <p>Adi naa kallalo ippatiki nundi povatam ledu.</p>
+
+                <p>Ninna nee daggara unna aa kshanalu gurthosthe…</p>
+
+                <p>Naa face meeda teliyakunda navvu vastundi.</p>
+
+                <p>Endhukante aa roju nenu kevalam oka beautiful moment ni experience cheyyaledu…</p>
+
+                <p class="modal-highlight">Naa Bangaram tho inka daggara ayyanane feeling ni experience chesanu.</p>
+
+                <p>Nuvvu naa jeevitham lo entha important o…</p>
+
+                <p>Ninna adi inka deep ga ardham ayyindi.</p>
+
+                <p class="modal-gold" style="font-size: 1.3rem; text-align: center; margin: 25px 0;">Thank you Bangarammmmm… ❤️</p>
+
+                <p>Naa life lo intha andamaina feeling ni ichinanduku.</p>
+
+                <p>Nannu nee lokam lo intha daggaraga chesinanduku.</p>
+
+                <p>Ninna naaku ichina aa anandam kosam…</p>
+
+                <p class="modal-highlight">Thank you for everything. ❤️</p>
+
+                <p>Kani…</p>
+
+                <p>Oka chinna complaint undi… 😜</p>
+
+                <p>Bangaram… inka kavali anipisthundi. 😂❤️</p>
+
+                <p>Ninna choopinchina aa swargam nachindhi…</p>
+
+                <p>Chaaaala nachindhi.</p>
+
+                <p>Kabatti ee Bava ki malli aa swargam ki entry pass eppudu isthav? 😜❤️</p>
+
+                <p>Entry pass okkasari ichesi lifetime membership lekunda pampinchesthe ee Bava oppukodu madam! 😂</p>
+
+                <p>Lifetime membership kavali… one-time experience tho satisfy avvanu! 😜❤️</p>
+
+                <p>Please consider my request and approve at the earliest. 😌😂</p>
+
+                <p>Endhukante…</p>
+
+                <p>Ninna oka sari choosina aa swargam kanna…</p>
+
+                <p class="modal-gold">Nuvvu pakkana unte prathi roju ade swargam la undali anedhe naa korika. ❤️</p>
+
+                <p>Long drive aina…</p>
+
+                <p>Bike ride aina…</p>
+
+                <p>Oka chinna room lo iddaram maatladukovadam aina…</p>
+
+                <p class="modal-highlight">Naa Bangaram tho unte ade naa swargam. ❤️</p>
+
+                <p>Ninna oka kotha memory create ayyindi…</p>
+
+                <p>Kani naa korika okkate—</p>
+
+                <p>Aa memory ni mana jeevitham motham repeat cheskuntu, inka enno andamaina memories kalisi raasukundam. ❤️</p>
+            </div>
+
+            <footer class="modal-sign-off">
+                <h2>I Love You, Bangarammmmm. 🫶❤️</h2>
+                <p style="font-style: italic; font-size: 1.1rem; color: #ff8fa3;">Yours lovingly,<br>Mee konchem greedy Bava 😜</p>
+                
+                <!-- Interactive Button inside modal -->
+                <div style="margin-top: 25px; text-align: center;">
+                    <button onclick="alert('Request sent to Bangaram! 😜❤️')" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); color: white; border: none; padding: 14px 28px; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 1rem; box-shadow: 0 6px 20px rgba(255, 8, 68, 0.4); transition: transform 0.2s ease;">
+                        Approve Entry Pass 🎟️
+                    </button>
+                </div>
+            </footer>
+        </article>
+    </div>
+</div>
+
 <!-- FULLSCREEN MODAL OVERLAY FOR ATHAMMA VANTA CHINAMMA PREMA BLOG -->
 <div id="vantaModal" class="modal-overlay">
     <button class="modal-close-btn" onclick="closeVantaModal()">✕</button>
@@ -1163,6 +1341,7 @@
                 <p>Mee chicken pulusu tinna aa roju naaku oka vishayam ardham ayyindi.</p>
 
                 <p>Naa life lo nenu edurukunna kashtalu entha unna…</p>
+
                 <p>Ippudu naa venaka nilabade manushulu unnaru.</p>
                 <p class="modal-highlight">Naa Bangaram undi.</p>
                 <p class="modal-highlight">Tana prema undi.</p>
@@ -1189,7 +1368,7 @@
                 <p>Naa Bangaram ni naaku ichinanduku maatrame kaadhu…</p>
                 <p class="modal-forever-tag">
                     Naa jeevitham lo naaku teliyakunda oka “illu” ane feeling ni kuda ichinanduku. ❤️
-                </div>
+                </p>
             </footer>
         </article>
     </div>
@@ -1393,13 +1572,38 @@
         document.body.style.overflow = 'auto';
     }
 
-    // Modal Floating Hearts
+    // --- Ninna Swargam Blog Modal Controls ---
+    function openSwargamModal() {
+        document.getElementById('swargamModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSwargamModal() {
+        document.getElementById('swargamModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Global Key Listener for Escape Key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeBlogModal();
+            closeVantaModal();
+            closeSwargamModal();
+            closeVideoModal();
+        }
+    });
+
+    // Modal Floating Hearts Generator
     document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('modal-heart-particles');
         const particleIcons = ['❤️', '💖', '✨', '💕', '🌸'];
 
-        function createParticle() {
-            if (document.getElementById('blogModal').style.display === 'block' || document.getElementById('vantaModal').style.display === 'block') {
+        setInterval(() => {
+            const isBlogOpen = document.getElementById('blogModal').style.display === 'block';
+            const isVantaOpen = document.getElementById('vantaModal').style.display === 'block';
+            const isSwargamOpen = document.getElementById('swargamModal').style.display === 'block';
+
+            if ((isBlogOpen || isVantaOpen || isSwargamOpen) && container) {
                 const particle = document.createElement('div');
                 particle.className = 'modal-particle';
                 particle.innerHTML = particleIcons[Math.floor(Math.random() * particleIcons.length)];
@@ -1413,9 +1617,7 @@
                     particle.remove();
                 }, 10000);
             }
-        }
-
-        setInterval(createParticle, 400);
+        }, 400);
     });
 </script>
 
