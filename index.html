@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our World ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Noto+Sans+Telugu:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a0a1f 0%, #2d1b3d 50%, #1a0a1f 100%);
+            min-height: 100vh;
+            color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        #app {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 16px 60px;
+        }
+
+        /* Top Kiss Count Banner */
+        .count-banner {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+            text-align: center;
+            padding: 14px 15px;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(255, 65, 108, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            letter-spacing: 0.5px;
+            flex-wrap: wrap;
+        }
+        .count-item { display: inline-flex; align-items: center; gap: 5px; }
+        .banner-divider { opacity: 0.6; }
+
+        /* Anniversary Banner */
+        .anniversary-banner {
+            background: linear-gradient(135deg, #7928ca 0%, #ff0080 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px 20px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(255, 0, 128, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .anniversary-banner:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(255, 0, 128, 0.6);
+        }
+        .anniversary-banner h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            color: #ffffff !important;
+        }
+        .anniversary-banner p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Gift Section */
+        .gift-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .gift-title {
+            font-family: 'Great Vibes', 'Caveat', cursive;
+            font-size: 2.8rem;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 75, 110, 0.4);
+            margin: 10px 0 15px 0;
+            line-height: 1.2;
+        }
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+            color: #ffffff !important;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(255, 8, 68, 0.4);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+        }
+        .video-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(255, 8, 68, 0.6);
+        }
+
+        .welcome {
+            text-align: center;
+            margin: 25px 0 30px;
+        }
+        .welcome h1 {
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        .welcome p {
+            color: white;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* Day Counter */
+        .card-days {
+            background: linear-gradient(135deg, #ffffff 0%, #fff0f2 100%) !important;
+            color: #d63384 !important;
+            padding: 22px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        .card-days h2 { color: #b81d61 !important; margin-bottom: 10px; }
+
+        /* Buttons Grid */
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 10px;
+        }
+
+        .page-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            min-height: 140px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            font-family: inherit;
+        }
+        .page-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+        }
+        .page-btn .emoji {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .page-btn .title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 6px;
+        }
+        .page-btn .teaser {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Button color variants */
+        .btn-swargam { background: linear-gradient(135deg, #e63946 0%, #901a1e 100%); }
+        .btn-vanta { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); }
+        .btn-destiny { background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%); }
+        .btn-gorintaku { background: linear-gradient(135deg, #800020 0%, #b91c1c 100%); }
+        .btn-promise { background: linear-gradient(135deg, #4a0e4e 0%, #2c0c30 100%); }
+        .btn-artist { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); }
+        .btn-athamma { background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%); }
+        .btn-twoworlds { background: linear-gradient(135deg, #fe019a 0%, #fe7bb0 100%); }
+        .btn-amma-promise { background: linear-gradient(135deg, #0f5257 0%, #0b3c49 100%); }
+        .btn-restaurant { background: linear-gradient(135deg, #d97706 0%, #9f1239 100%); }
+        .btn-frame { background: linear-gradient(135deg, #854d0e 0%, #b45309 100%); }
+        .btn-gallery { background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%); }
+        .btn-location { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+        .btn-thoughts { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); }
+        .btn-heart { background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%); }
+        .btn-letter { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); }
+        .btn-cycle { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); }
+        .btn-newletter { background: linear-gradient(135deg, #be185d 0%, #f43f5e 100%); }
+        .btn-chilipi { background: linear-gradient(135deg, #db2777 0%, #f472b6 100%); }
+        .btn-aavida { background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); }
+        .btn-ilaundaku { background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); }
+        .btn-patteelu { background: linear-gradient(135deg, #c026d3 0%, #e879f9 100%); }
+        .btn-anubhoothi { background: linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%); }
+
+        /* ===== MODAL STYLES ===== */
+
+
+
+
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #0d0811;
+            z-index: 9999;
+            overflow-y: auto;
+            color: #f8f9fa;
+            font-family: 'Noto Sans Telugu', 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+
+        .modal-close-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            font-size: 24px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            transition: background 0.3s ease;
+        }
+        .modal-close-btn:hover {
+            background: rgba(255, 75, 110, 0.8);
+        }
+
+        .modal-bg-slideshow {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: -2;
+        }
+        .modal-slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: slideAnimation 14s infinite ease-in-out;
+            transform: scale(1.05);
+        }
+        .modal-slide:nth-child(1) {
+            background-image: url('https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8297.jpeg');
+            animation-delay: 0s;
+        }
+        .modal-slide:nth-child(2) {
+            background-image: url('https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8244.jpeg');
+            animation-delay: 7s;
+        }
+
+        @keyframes slideAnimation {
+            0% { opacity: 0; transform: scale(1.05); }
+            15% { opacity: 1; }
+            50% { opacity: 1; transform: scale(1); }
+            65% { opacity: 0; transform: scale(1.02); }
+            100% { opacity: 0; }
+        }
+
+        .modal-bg-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: radial-gradient(circle at center, rgba(12, 6, 18, 0.55) 0%, rgba(5, 2, 8, 0.88) 100%);
+            z-index: -1;
+            backdrop-filter: blur(3px);
+        }
+
+        #modal-heart-particles {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .modal-particle {
+            position: absolute;
+            color: #ff8fa3;
+            opacity: 0.6;
+            animation: modalFloatUp 8s infinite linear;
+            font-size: 1.2rem;
+        }
+        @keyframes modalFloatUp {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+            20% { opacity: 0.7; }
+            80% { opacity: 0.7; }
+            100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
+        }
+
+        .modal-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px 80px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-blog-card {
+            background: rgba(15, 8, 20, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 24px;
+            padding: 45px 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(14px);
+            text-align: left;
+        }
+
+        .modal-blog-card header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 25px;
+        }
+
+        .modal-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff4b6e, #d62839);
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255, 75, 110, 0.4);
+        }
+
+        .modal-blog-card h1 {
+            font-family: 'Great Vibes', 'Caveat', cursive;
+            font-size: 3rem;
+            color: #ffffff !important;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 25px rgba(255, 75, 110, 0.5);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .modal-sub-heading {
+            font-size: 1.4rem;
+            color: #ff8fa3;
+            font-weight: 600;
+        }
+
+        .modal-content {
+            font-size: 1.08rem;
+            font-weight: 300;
+        }
+        .modal-content p { margin-bottom: 16px; }
+
+        .modal-highlight { color: #ffffff; font-weight: 600; }
+        .modal-gold { color: #ffd700; font-weight: 600; }
+
+        .modal-content ul {
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 10px;
+        }
+        .modal-content ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        .modal-content ul li::before {
+            content: "❤️";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 0.9rem;
+        }
+
+        .modal-sign-off {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .modal-sign-off h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.6rem;
+            color: #ff8fa3 !important;
+            margin-bottom: 15px;
+        }
+        .modal-forever-tag {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-top: 20px;
+        }
+
+        .featured-large-img {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            display: block;
+            margin: 20px auto;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .location-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #059669 !important;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 600px) {
+            .modal-blog-card { padding: 25px 18px; border-radius: 16px; }
+            .modal-blog-card h1 { font-size: 2.2rem; }
+            .modal-sub-heading { font-size: 1.2rem; }
+            .modal-content { font-size: 1rem; }
+            .gift-title { font-size: 2.2rem; }
+            .video-btn { font-size: 16px; padding: 12px 22px; }
+            .pages-grid { grid-template-columns: 1fr; }
+            .page-btn { min-height: 120px; padding: 22px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <!-- Top Kiss Count Banner -->
+    <div class="count-banner">
+        <span class="count-item">💋 <b>169</b> Liplocks</span>
+        <span class="banner-divider">•</span>
+        <span class="count-item">❤️ <b>192</b> Kisses</span>
+    </div>
+
+    <!-- 6 Months Anniversary Banner -->
+    <div class="anniversary-banner" onclick="openModal('blogModal')">
+        <h2>🎉 Happy 6 Months Anniversary Bangaram ❤️</h2>
+        <p>Click here to read our special 6 months journey post ✨</p>
+    </div>
+
+    <!-- Gift Section -->
+    <div class="gift-section">
+        <h2 class="gift-title">🎁 Gift for Bangaram</h2>
+        <button onclick="openVideoModal()" class="video-btn">
+            🎥 Watch Our Video ❤️
+        </button>
+    </div>
+
+    <div class="welcome">
+        <h1>💜 Hi Bangaram</h1>
+        <p>Welcome to our world ❤️</p>
+    </div>
+
+    <!-- Day Counter -->
+    <div class="card-days">
+        <h2>To My Bangaram, Lahari ❤️</h2>
+        <p id="days" style="margin: 0;"></p>
+    </div>
+
+    <!-- ===== BUTTONS GRID (each opens a new page-style modal) ===== -->
+    <div class="pages-grid">
+
+        <button class="page-btn btn-letter" onclick="openModal('letterModal')">
+            <span class="emoji">💌</span>
+            <span class="title">My First Letter</span>
+            <span class="teaser">Every heartbeat…</span>
+        </button>
+
+        <button class="page-btn btn-cycle" onclick="openModal('cycleModal')">
+            <span class="emoji">🌸</span>
+            <span class="title">Bangaram's Cycle Tracker</span>
+            <span class="teaser">Period Tracker</span>
+        </button>
+
+        <button class="page-btn btn-newletter" onclick="openModal('newLetterModal')">
+            <span class="emoji">💕</span>
+            <span class="title">Naa Lopala Oka Bhaagam</span>
+            <span class="teaser">New Letter ❤️</span>
+        </button>
+
+        <button class="page-btn btn-chilipi" onclick="openModal('chilipiModal')">
+            <span class="emoji">💋</span>
+            <span class="title">Chilipi Prema</span>
+            <span class="teaser">Eroju Naa Bangaram…</span>
+        </button>
+
+        <button class="page-btn btn-aavida" onclick="openModal('aavidaModal')">
+            <span class="emoji">🍳</span>
+            <span class="title">Aavida Vanta</span>
+            <span class="teaser">Special Egg Curry ❤️</span>
+        </button>
+
+        <button class="page-btn btn-ilaundaku" onclick="openModal('ilaundakuModal')">
+            <span class="emoji">🥺</span>
+            <span class="title">Naa Bangaram Ila Undakudadhu</span>
+            <span class="teaser">Bava is with you ❤️</span>
+        </button>
+
+        <button class="page-btn btn-patteelu" onclick="openModal('patteeluModal')">
+            <span class="emoji">👣</span>
+            <span class="title">Patteelaki Andam</span>
+            <span class="teaser">Naa Bangaram Kalla Valla…</span>
+        </button>
+
+        <button class="page-btn btn-anubhoothi" onclick="openModal('anubhoothiModal')">
+            <span class="emoji">💫</span>
+            <span class="title">Nuvvu Naaku Anubhoothi</span>
+            <span class="teaser">Oka Anubhoothivi ❤️</span>
+        </button>
+
+        <button class="page-btn btn-swargam" onclick="openModal('swargamModal')">
+            <span class="emoji">✨</span>
+            <span class="title">Ninna Nenu Choosina Swargam</span>
+            <span class="teaser">Sweet Memories</span>
+        </button>
+
+
+
+
+
+
+
+        <button class="page-btn btn-vanta" onclick="openModal('vantaModal')">
+            <span class="emoji">🍲</span>
+            <span class="title">Athamma Vanta Chinamma Prema</span>
+            <span class="teaser">Heartfelt Letter</span>
+        </button>
+
+        <button class="page-btn btn-destiny" onclick="openModal('destinyModal')">
+            <span class="emoji">🕉️</span>
+            <span class="title">Maybe This Is Destiny…</span>
+            <span class="teaser">Sai Baba Sannidhi</span>
+        </button>
+
+        <button class="page-btn btn-gorintaku" onclick="openModal('gorintakuModal')">
+            <span class="emoji">🌿</span>
+            <span class="title">Gorintaku</span>
+            <span class="teaser">Bangaram ❤️</span>
+        </button>
+
+        <button class="page-btn btn-promise" onclick="openModal('bavasPromiseModal')">
+            <span class="emoji">🛡️</span>
+            <span class="title">Bava's Promise</span>
+            <span class="teaser">Nenu Unnanu</span>
+        </button>
+
+        <button class="page-btn btn-artist" onclick="openModal('artistModal')">
+            <span class="emoji">🎨</span>
+            <span class="title">The Artist Behind the Canvas</span>
+            <span class="teaser">Your Painting</span>
+        </button>
+
+        <button class="page-btn btn-athamma" onclick="openModal('athammaModal')">
+            <span class="emoji">❤️</span>
+            <span class="title">Athamma Love</span>
+            <span class="teaser">Special Letter</span>
+        </button>
+
+        <button class="page-btn btn-twoworlds" onclick="openModal('twoworldsModal')">
+            <span class="emoji">📸</span>
+            <span class="title">Two Worlds, One Frame</span>
+            <span class="teaser">Beautiful Memory</span>
+        </button>
+
+        <button class="page-btn btn-amma-promise" onclick="openModal('ammaPromiseModal')">
+            <span class="emoji">✨</span>
+            <span class="title">Amma's Word & My Promise</span>
+            <span class="teaser">Forever Promise</span>
+        </button>
+
+        <button class="page-btn btn-restaurant" onclick="openModal('restaurantModal')">
+            <span class="emoji">🍽️</span>
+            <span class="title">Our First Restaurant</span>
+            <span class="teaser">Together…</span>
+        </button>
+
+        <button class="page-btn btn-frame" onclick="openModal('frameModal')">
+            <span class="emoji">🖼️</span>
+            <span class="title">My First Photo Frame</span>
+            <span class="teaser">You are the first</span>
+        </button>
+
+        <button class="page-btn btn-gallery" onclick="openModal('galleryModal')">
+            <span class="emoji">📸</span>
+            <span class="title">Our Beautiful Memories</span>
+            <span class="teaser">Gallery</span>
+        </button>
+
+        <button class="page-btn btn-location" onclick="openModal('locationModal')">
+            <span class="emoji">📍</span>
+            <span class="title">Our First Kiss</span>
+            <span class="teaser">Special Place</span>
+        </button>
+
+        <button class="page-btn btn-thoughts" onclick="openModal('thoughtsModal')">
+            <span class="emoji">🍂</span>
+            <span class="title">Bava's Life Thoughts</span>
+            <span class="teaser">Words from heart</span>
+        </button>
+
+        <button class="page-btn btn-heart" onclick="openModal('heartModal')">
+            <span class="emoji">📝</span>
+            <span class="title">A Little Piece of My Heart</span>
+            <span class="teaser">Love Letter</span>
+        </button>
+
+    </div>
+</div>
+
+<!-- ==================== ALL MODALS ==================== -->
+
+<!-- 1. First Letter -->
+<div id="letterModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('letterModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">First Letter</span>
+                <h1>💌 My First Letter</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify;">
+                <p style="opacity:0.95;">
+                    Every heartbeat writes another page of our story.
+                    This little corner of the internet is only for us.
+                    No matter where life takes us, my heart will always find its way back to you.
+                </p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Love you forever ❤️</h2>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- Cycle Tracker Modal -->
+<div id="cycleModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('cycleModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Cycle Tracker</span>
+                <h1>🌸 Bangaram's Cycle Tracker</h1>
+                <div class="modal-sub-heading">For my Bangaram ❤️</div>
+            </header>
+            <div class="modal-content" style="text-align:center;">
+                <div style="background:rgba(255,255,255,0.12); border-radius:16px; padding:25px; margin-top:10px;">
+                    <p id="cycleInfo" style="font-size:1.15rem; line-height:1.9;"></p>
+                </div>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Take care, Bangaram ❤️</h2>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- New Letter Modal -->
+<div id="newLetterModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('newLetterModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">New Letter</span>
+                <h1>Naa Bangaram… Naa Lopala Oka Bhaagam ❤️</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8388.jpeg" alt="Bangaram" class="featured-large-img" onerror="this.style.display='none'">
+                
+                <p>Enduko ee madhya Bangaram…</p>
+                <p>Nuvvu naaku daggaraga unnattu kaadhu… naalo okati aipothunnattu anipisthundi.</p>
+                <p>Mundu nuvvu naaku chala daggara ani anipinchedi.</p>
+                <p>Kani ippudu…</p>
+                <p class="modal-highlight">Nuvvu naalo oka bhaagam aipoyavemo anipisthundi.</p>
+                <p>Leda…</p>
+                <p>Nanne nee lopala kalipeskunnavemo.</p>
+                <p>Nee maatalu…</p>
+                <p>Nee pogaru…</p>
+                <p>Nee allari…</p>
+                <p>Ivanni ippudu naaku chala garvanga anipisthunnayi.</p>
+                <p>Ninnu chusthe…</p>
+                <p>“Idi naa Bangaram” ani cheppukovalanipisthundi.</p>
+                <p>Nuvvu entha kashtam vachina navvuthu munduku vellipothav.</p>
+                <p>Kani ade Bangaram…</p>
+                <p>Bava konchem dooramga velthunte maatram chinna pillala edupu mokham peduthundi. 😄❤️</p>
+                <p>Enduko…</p>
+                <p>Adi chusthe naaku chala mudduga anipisthundi.</p>
+                <p>Bahusha…</p>
+                <p>Nuvvu kuda nannu nee lopala kalupukunnavemo.</p>
+                <p>Bahusha anduke Bava dooramga velthunte nee kallallo aa chinna baadha kanipisthundemo.</p>
+                <p class="modal-gold">Naa muddula Bangaram…</p>
+                <p class="modal-gold">Naa Bangaru Konda…</p>
+                <p>Nuvvu naaku ippudu oka person maatrame kaadhu.</p>
+                <p>Naa jeevitham lo naatho kalisi nadiche oka bhaagam.</p>
+                <p>Nee santhosham naaku santhosham.</p>
+                <p>Nee baadha naaku baadha.</p>
+                <p>Nee gelupu naaku garvam.</p>
+                <p>Nee bhayam naaku dhairyam ivvalanipinche reason.</p>
+                <p>Nee navvu chusthe…</p>
+                <p>Nenu inkem adagakunda happy aipotha.</p>
+                <p>Anduke naa pichi korika okkate…</p>
+                <p class="modal-highlight">Ee roju nuvvu ela unnava… alane naa pakkana 60 years marriage anniversary roju kuda undali. ❤️</p>
+                <p>Appatiki mana juttu tellaga aipoyina…</p>
+                <p>Mana nadaka slow aipoyina…</p>
+                <p>Mana faces lo ee roju unna youth undakapoyina…</p>
+                <p>Nuvvu Bava ki ade Bangaram ga undali.</p>
+                <p>Em vishayam aina…</p>
+                <p>Enta chinna matter aina…</p>
+                <p>Enta pedda problem aina…</p>
+                <p>“Bava ki cheppali” ani anipinchela ninnu chuskovali.</p>
+                <p>Nee manasulo unna prathi maata…</p>
+                <p>Nee bhayam…</p>
+                <p>Nee kopam…</p>
+                <p>Nee allari…</p>
+                <p>Nee korikalu…</p>
+                <p>Anni Bava tho dhairyamga cheppagalige ammayiga undali.</p>
+                <p>Nuvvu naa pakkana unte…</p>
+                <p>Nenu kuda prapancham motham edurukogalanu ane dhairyam naaku untundi.</p>
+                <p>Anduke…</p>
+                <p>Naa Bangaram…</p>
+                <p>Nuvvu naalo oka bhaagam aipoyavo…</p>
+                <p>Leda nannu nee lopala kalipeskunnavo…</p>
+                <p>Naaku teliyadu.</p>
+                <p>Kani okati maatram telusu…</p>
+                <p class="modal-gold">Ee Bava ki ippudu “nenu” ane maata kanna “manam” ane maata chala ishtam. ❤️</p>
+                <p>Nuvvu navvuthu undali.</p>
+                <p>Nuvvu dhairyamga undali.</p>
+                <p>Nuvvu edaina naatho cheppagalagali.</p>
+                <p>Nuvvu eppudu…</p>
+                <p>“Bava unnaadu” ane nammakam tho undali.</p>
+                <p>Ee pichi Bava korika anthe…</p>
+                <p>Ee janma motham kaadhu Bangaram… mana 60th anniversary roju kuda nee cheyyi pattukoni, “Nuvvu appudu kuda na Bangaramve” ani cheppali. ❤️</p>
+                <p class="modal-gold" style="font-size:1.3rem; text-align:center; margin-top:25px;">Naa muddula Bangarammm…<br>Naa Bangaru Konda…<br>Nuvvu naalo kalisipoyav. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>I Love You, Bangaram ❤️</h2>
+                <p class="modal-forever-tag">Nuvvu naalo oka bhaagam ❤️</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- Chilipi Prema Modal -->
+<div id="chilipiModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('chilipiModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Chilipi Prema</span>
+                <h1>Eroju Naa Bangaram Chupinchina Chilipi Prema ❤️</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8484.png" alt="Bangaram" class="featured-large-img" onerror="this.style.display='none'">
+
+                <p>Eeroju Bangaram… nuvvu chesina aa chilipi pani naaku chala nachindi. ❤️</p>
+                <p>Enduko teliyadu…</p>
+                <p>Ninnu nvu ummahh isthunte bhayanga garvanga anipinchindi.</p>
+                <p>Nuvvu eppudu nannu protect chese way…</p>
+                <p>Nenu vere vallatho unnapudu nuvvu konchem jealous feel ayye way…</p>
+                <p>Nuvvu eppudu daanni direct ga bayataki chupinchavu. Kani konni sarlu nenu permissions adaguthu bayataki vellataniki cranky ayinappudu, nee aa chinna reactions lo adi bayataki vastundi.</p>
+                <p>Nijam cheppalante…</p>
+                <p class="modal-gold">Nee aa cute jealous reactions kosam aina konni trips sacrifice cheyyali anipisthundi. 😜❤️</p>
+                <p>Kani ninna…</p>
+                <p>Enduko nee lopala daachukunna oka feeling unexpected ga bayataki vachindi.</p>
+                <p>Appatike naaku ardham ayyindi…</p>
+                <p class="modal-highlight">Bangaram gadiki Bava meeda ekkado picha prema perigipoyindi ani. ❤️</p>
+                <p>Kani aa kshanam…</p>
+                <p>Middle of the street…</p>
+                <p>Street light velugulo…</p>
+                <p>Andari mundu…</p>
+                <p>Nuvvu naaku aa dhairyamga kiss ichinappudu…</p>
+                <p>Naaku aa moment kevalam oka kiss la anipinchaledu.</p>
+                <p class="modal-gold">“Veedu naa vaadu… veedu naa asthi” ani nuvvu andariki cheppinattu anipinchindi. ❤️</p>
+                <p>Aa kshanam lo…</p>
+                <p>Nuvvu naaku entha close aipoyavo inka deep ga feel ayyanu.</p>
+                <p>Nee prema lo unna aa possessiveness…</p>
+                <p>Nee protect chese way…</p>
+                <p>Nee jealous ayye aa chinna chinna moments…</p>
+                <p>Ivanni naaku ippudu chala precious.</p>
+                <p>Endhukante avi nannu control cheyyadaniki kaadhu…</p>
+                <p>Nannu entha ga nee life lo kalupukunnavo chupinche nee own way.</p>
+                <p>Inka aa cafe lo…</p>
+                <p>Manam iddaram kurchoni mana life plans gurinchi maatladukunnappudu…</p>
+                <p>Naaku enduko oka strange feeling vachindi.</p>
+                <p>Nenu unna situation…</p>
+                <p>Nenu unna phase lo…</p>
+                <p>Naa mind lo unna confusion…</p>
+                <p>Ivanni pakkana petti…</p>
+                <p>“Bava… manam ila undali… ila life build cheskundam…” ani nuvvu mana future gurinchi maatladuthunte…</p>
+                <p class="modal-highlight">Nuvvu naa pakkana koorchunna Bangaram kaadhu…</p>
+                <p class="modal-gold">Naa life ki dhairyam chepthunna oka Ammavaru la anipinchav. ❤️</p>
+                <p>Nenu konchem weak ga feel ayina moment lo…</p>
+                <p>Nuvvu teliyakundane naaku strength ichav.</p>
+                <p>Anduke e roju naaku chala special.</p>
+                <p>Oka street light kindha ichina aa unexpected kiss…</p>
+                <p>Oka cafe lo kalisi kanna aa future…</p>
+                <p>Nee jealous reactions…</p>
+                <p>Nee protect chese way…</p>
+                <p>Ivanni kalipi chusthe…</p>
+                <p>Naa Bangaram na life lo entha deep ga vachindo naake teliyadam ledu.</p>
+                <p>Nuvvu nannu protect cheyyali…</p>
+                <p>Nuvvu nannu konchem possessive ga love cheyyali…</p>
+                <p>Nuvvu jealous avvali…</p>
+                <p>Nuvvu naatho future plans cheyyali…</p>
+                <p>Nuvvu kopam vachina naatho cheppali…</p>
+                <p>Nuvvu happy ga unna naatho share cheyyali…</p>
+                <p>Endhukante nenu kuda alane nee life lo undalani korukuntunnanu. ❤️</p>
+                <p>Ninna nuvvu naaku oka feeling ichav…</p>
+                <p class="modal-gold">“Bava… nuvvu na vaadivi.”</p>
+                <p>Aa feeling ni ee Bava eppatiki marchipodu.</p>
+                <p class="modal-highlight" style="text-align:center; margin-top:25px;">Love youuuuu Chinnaaammaaaa… ❤️</p>
+                <p>Nee chilipi panulaki…</p>
+                <p>Nee cute jealousy ki…</p>
+                <p>Nee possessiveness ki…</p>
+                <p>Nee prema ki…</p>
+                <p>Nee dhairyaniki…</p>
+                <p class="modal-gold" style="text-align:center;">Ee Bava full ga padipoyadu. 😜❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Love you Chinnaaammaaaa ❤️</h2>
+                <p class="modal-forever-tag">Nee chilipi prema ki padipoyadu 😜</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- Aavida Vanta Modal -->
+<div id="aavidaModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('aavidaModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Aavida Vanta</span>
+                <h1>Eeroju Naa Aavida Na Kosam Vanta Vandindi ❤️🍳</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8487.jpeg" alt="Aavida Vanta" class="featured-large-img" onerror="this.style.display='none'">
+
+                <p>Eeroju oka maata chala garvanga cheppagalanu…</p>
+                <p class="modal-highlight">Maa Aavida na kosam vanta vandindi. ❤️</p>
+                <p>Nijam cheppalante, inthavaraku nenu “Aavida” ane word ni naa Bangaram kosam eppudu vadaledu.</p>
+                <p>Endukante…</p>
+                <p>Aa maata cheppe time inka raledemo ane chinna bhayam ekkado naalo undedi.</p>
+                <p>Kani eeroju…</p>
+                <p>Aa maata ni chala garvanga cheppagaluthunna.</p>
+                <p class="modal-gold">Maa Aavida na kosam vanta vandindi. ❤️</p>
+                <p>Adi kuda mamoolu vanta kaadhu…</p>
+                <p>Special Egg Curry. 😌🍳</p>
+                <p>Inka taste gurinchi cheppala?</p>
+                <p>Taste chidakottesindi! 😂❤️</p>
+                <p>Asalu naa rakshasi ki intha talent undani nenu eppudu anukoledu.</p>
+                <p>“Edo chesthadi le…” ani anukunna.</p>
+                <p>Kani ila intha baaga cook chesthundi ani maatram assalu expect cheyyaledu. 😜</p>
+                <p>Naa Bangaram…</p>
+                <p>Nuvvu anni vishayallo top ani telusu.</p>
+                <p>Kani cooking lo kuda ila topest ani eeroju telisindi. 😂❤️</p>
+                <p>Kani nijamaina special enti telusa?</p>
+                <p>Aa curry taste kaadhu.</p>
+                <p class="modal-highlight">Adi na kosam chesina effort.</p>
+                <p>Nee busy schedule lo…</p>
+                <p>Nee daggara unna thakkuva time lo…</p>
+                <p>Na kosam konchem time teesukoni…</p>
+                <p>Aalochinchi…</p>
+                <p>Vandi…</p>
+                <p>Naa kosam pettav.</p>
+                <p class="modal-gold">Aa food lo naaku kanipinchindi egg curry kaadhu Bangaram… nee prema. ❤️</p>
+                <p>Anduke aa roju tinna prathi mudda naaku special.</p>
+                <p>Taste baagundi kabatti kaadhu…</p>
+                <p>Naa Aavida tana busy life lo na kosam oka chinna place create cheskundi kabatti.</p>
+                <p>Nuvvu na kosam pettina ee chinna effort kuda naaku intha pedda feeling ichindante…</p>
+                <p>Nuvvu naa life lo entha special place lo unnava ani naake ardham avuthundi.</p>
+                <p>Naa Bangaram…</p>
+                <p>Nee prema ki…</p>
+                <p>Nee efforts ki…</p>
+                <p>Nuvvu na kosam chese prathi chinna pani ki…</p>
+                <p class="modal-highlight">Ee Bava already banisa aipoyadu. ❤️</p>
+                <p>Nuvvu edaina chesthe…</p>
+                <p>Nuvvu entha busy unna na kosam time teesukunte…</p>
+                <p>Nuvvu chinna maata cheppina…</p>
+                <p>Nuvvu na kosam oka egg curry vandina…</p>
+                <p>Naaku adi chaalu.</p>
+                <p>Endukante naaku food kanna…</p>
+                <p class="modal-gold">Daani venaka unna “Bava kosam” ane thought ekkuva ruchiga untundi. ❤️</p>
+                <p>So eeroju official ga declare chesthunna…</p>
+                <p class="modal-highlight">My LI is great. ❤️</p>
+                <p class="modal-highlight">My Bangaram is great. ❤️</p>
+                <p class="modal-gold" style="font-size:1.2rem;">Maa Aavida is THOPEST! 😂🔥❤️</p>
+                <p>And yes…</p>
+                <p>Maa Aavida vanta tinna Bava… lifetime ki tana prema ki banisa. 😜❤️</p>
+                <p class="modal-gold" style="text-align:center; margin-top:25px;">Love youuuuu naa Bangarammmm. ❤️<br>Nee egg curry kanna nee prema chaaaala chaaaala ruchiga undi. 🫶🍳❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Love you naa Aavida ❤️</h2>
+                <p class="modal-forever-tag">Maa Aavida is THOPEST! 🍳❤️</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- Naa Bangaram Ila Undakudadhu Modal -->
+<div id="ilaundakuModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('ilaundakuModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">From Bava</span>
+                <h1>Naa Bangaram Ila Undakudadhu… ❤️</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Naa Bangaram ni nenu ila chudalekapothunna…</p>
+                <p>Adi ala dull ga, edupu mokham tho unte naaku chala baadha ga undi. ❤️</p>
+                <p>Enta vaddu anukunna…</p>
+                <p>Dhairyam raavatledu.</p>
+                <p>Endukante naa Bangaram ala baadhapaduthu unte, nenu maatram normal ga ela undagalanu?</p>
+                <p>Daani confusion…</p>
+                <p>Daani bhayam…</p>
+                <p>Daani tension…</p>
+                <p>Ivanni chusthunte naaku lopala edo teliyani bhayam puttuthundi.</p>
+                <p>Nuvvu entha confusion lo unna sare Bangaram…</p>
+                <p>Naaku maatram oka vishayam chala clear.</p>
+                <p>Nee meeda naaku unna prema gurinchi.</p>
+                <p>Mana meeda naaku unna nammakam gurinchi.</p>
+                <p>Nuvvu na meeda chupinchina prema gurinchi.</p>
+                <p>Ee rendu kalipi chusthe…</p>
+                <p class="modal-highlight">Ninnu ila baadhapaduthu choodatam naa valla kaadu.</p>
+                <p>Nuvvu edusthunte…</p>
+                <p>Naa manasu kuda edusthundi.</p>
+                <p>Nuvvu bhayapadithe…</p>
+                <p>Naa gunde kuda bhayapaduthundi.</p>
+                <p>Nuvvu confusion lo unte…</p>
+                <p>Nenu em cheyyalo teliyaka nenu kuda kumilipothanu.</p>
+                <p>Kani oka vishayam maatram…</p>
+                <p class="modal-gold">Ninnu nenu naa jeevitham nundi vadulukolenu.</p>
+                <p>Endukante nuvvu naaku oka person kaadhu Bangaram…</p>
+                <p>Nuvve naa oopiri.</p>
+                <p>Nuvve naa pranam.</p>
+                <p>Nuvve naa jeevitham.</p>
+                <p>Nuvvu leni naa jeevitham…</p>
+                <p>Naaku nijanga oka cheekati la anipisthundi.</p>
+                <p>Anduke ee situation lo kuda nenu nee cheyyi vadalanu.</p>
+                <p>Nee confusion ni nenu force cheyyanu.</p>
+                <p>Nee bhayani nenu takkuva cheyyanu.</p>
+                <p>Nee tension ni nenu ignore cheyyanu.</p>
+                <p>Nuvvu edurukuntunna prathi feeling ni nenu nee pakkana nilabadi edurukunta.</p>
+                <p>Endukante…</p>
+                <p class="modal-highlight">Nuvvu na Bangaram.</p>
+                <p>A Baba ela aithe manam iddaram kalusukune la chesaro…</p>
+                <p>Manaki teliyani daari lo nunchi okarinokaram teesukochi mana iddari madhya ee bandham create chesaro…</p>
+                <p class="modal-gold">Ade Baba mana pelli kuda jarige la chestharani nenu nammutunnanu. ❤️</p>
+                <p>Adi naa aasa.</p>
+                <p>Adi naa korika.</p>
+                <p>Adi naa nammakam.</p>
+                <p>Kani aa roju varaku…</p>
+                <p>Nee pakkana nenu untanu.</p>
+                <p>Nuvvu bhayapadithe dhairyam isthanu.</p>
+                <p>Nuvvu edisthe nee kanneellu thudusthanu.</p>
+                <p>Nuvvu confusion lo unte nee pakkana kurchoni maatladathanu.</p>
+                <p>Nuvvu navvithe…</p>
+                <p>Aa navvu choosi nenu kuda navvuthanu.</p>
+                <p>Naa Bangaram mokham meeda unna aa chirunavvu…</p>
+                <p class="modal-gold">Eppatiki povakunda chuskunta ani Baba ki eeroju nenu maata isthunnanu. ❤️</p>
+                <p>Naa daggara prathi problem ki answer undakapovachu…</p>
+                <p>Kani oka answer maatram eppudu untundi—</p>
+                <p class="modal-highlight" style="text-align:center; font-size:1.2rem;">“Bava unnaadu.”</p>
+                <p>Nuvvu entha confusion lo unna…</p>
+                <p>Entha bhayapadina…</p>
+                <p>Entha tension padina…</p>
+                <p class="modal-gold">Bava nee pakkane untadu. ❤️</p>
+                <p>Naa Bangaram…</p>
+                <p>Nee mokham meeda malli aa chinna navvu chudali.</p>
+                <p>Adi vachina roju…</p>
+                <p class="modal-highlight">Naa prapancham malli veluguthundi. ❤️</p>
+                <p>Love you naa Bangarammm…</p>
+                <p>Nee baadha naa baadha.</p>
+                <p>Nee navvu naa santhosham.</p>
+                <p>Nee jeevitham… naa jeevitham. ❤️</p>
+                <p class="modal-gold" style="text-align:center; margin-top:25px;">— Nee Bava, eppatiki nee pakkane. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Bava is always with you ❤️</h2>
+                <p class="modal-forever-tag">Nee pakkane untadu ❤️</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- Patteelaki Andam Modal -->
+<div id="patteeluModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('patteeluModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Cute Love</span>
+                <h1>Patteelaki Andam Techindi Naa Bangaram Kalla Valla… ❤️</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8582.jpeg" alt="Patteelu" class="featured-large-img" onerror="this.style.display='none'">
+
+                <p>Naa Bangaram gadi patteelu chaaaala andanga unnayi kadaaa… ❤️</p>
+                <p>Kani nijam cheppalante…</p>
+                <p class="modal-highlight">Aa andam patteeladi kaadhu… avi vesukunna aa kalla di. 🥹❤️</p>
+                <p>Aa chinna patteelu tana kaallaki inka andam techchayi.</p>
+                <p>Kani naaku maatram aa patteela kanna…</p>
+                <p>Aa patteelu dharinchina naa Bangaram kaalle chudali anipisthundi.</p>
+                <p>Oka chinna aasha undi Bangaram…</p>
+                <p>Oka roju nee aa kaalla daggara naa tala pettukoni…</p>
+                <p>Nee kaallani naa gundela meeda pettukoni…</p>
+                <p>Nuvvu pakkana kurchoni naatho kaburlu cheppali.</p>
+                <p>Nenu maatram aa kaallani chusthu…</p>
+                <p>Aa patteelu chese chinna chinna shabdaalu vintuu…</p>
+                <p class="modal-gold">Naa Bangaram tho alaane undipovali. ❤️</p>
+                <p>Nee aa kaallu eppudu kandipokudadhu.</p>
+                <p>Eppudu noppi raavadhu.</p>
+                <p>Eppudu alisipokudadhu.</p>
+                <p>Aa kaallu eppudu sukumaaranga, santoshamga undali.</p>
+                <p>Endukante…</p>
+                <p>Aa kaallu nadichedi kevalam nee kosam kaadhu…</p>
+                <p class="modal-highlight">Naa vaipu kuda vastayi kadaa. ❤️</p>
+                <p>Naa daggariki nadichi vachina prathi aduguki…</p>
+                <p>Naa kosam vesina prathi aduguki…</p>
+                <p>Aa kaallani jeevitham antha jagrathaga chuskunta.</p>
+                <p>Patteelu entha andanga unna…</p>
+                <p>Vaatiki andam techchindi naa Bangaram.</p>
+                <p>Kani naa Bangaram kaallaki…</p>
+                <p class="modal-gold">Ee Bava prema inka konchem andam techchela chuskunta. ❤️</p>
+                <p>Naa Bangaram…</p>
+                <p>Nee kaallaki unna patteela shabdam kante…</p>
+                <p class="modal-highlight">Nee adugula shabdam naa intlo vinipinche roju kosam ee Bava eduruchusthunnadu. 🥹❤️</p>
+                <p>Naa Bangaram kaallu eppudu noppi lekunda…</p>
+                <p>eppudu sukumaaranga…</p>
+                <p>eppudu naa vaipu nadusthu undali.</p>
+                <p class="modal-gold" style="text-align:center; margin-top:20px;">Ade naa chinna korika. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Love you naa Bangaram ❤️</h2>
+                <p class="modal-forever-tag">Nee adugula shabdam kosam eduruchusthunna 🥹</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- Nuvvu Naaku Anubhoothi Modal -->
+<div id="anubhoothiModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('anubhoothiModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Anubhoothi</span>
+                <h1>Naa Bangaram… Nuvvu Naaku Alavaatu Kaadhu, Oka Anubhoothivi ❤️</h1>
+                <div class="modal-sub-heading">Bangarammmmm…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Bangarammmmm,</p>
+                <p>Konni bandhalu mana life loki vachinappudu pedda sound tho raavu…</p>
+                <p>Chala silent ga vastayi.</p>
+                <p>Oka roju oka message la…</p>
+                <p>Oka roju oka call la…</p>
+                <p>Oka roju oka chinna smile la…</p>
+                <p>Teliyakunda mana roju lo oka part aipothayi.</p>
+                <p>Nuvvu kuda alane vachav.</p>
+                <p>Kani eppudo oka point daggara…</p>
+                <p>Naa roju lo oka part kaakunda,</p>
+                <p class="modal-highlight">naa roju motham aipoyav.</p>
+                <p>Ippudu poddhuna levagane phone chusthe nee gurthu…</p>
+                <p>Edaina manchi vishayam jarigithe first neetho cheppali anipisthundi…</p>
+                <p>Edaina baadha vasthe nee daggara ki vachi cheppali anipisthundi…</p>
+                <p>Oka funny thing kanipisthe…</p>
+                <p>“Idi naa Bangaram ki cheppali” ani anipisthundi.</p>
+                <p>Enduko telusa?</p>
+                <p>Nuvvu naa life lo important person ga undipoledu…</p>
+                <p class="modal-gold">Naa life ni share cheskune person aipoyav.</p>
+                <p>⸻</p>
+                <p>Naaku ippudu pedda pedda moments kanna…</p>
+                <p>Mana chinna chinna moments ekkuva ishtam.</p>
+                <p>Nuvvu reason lekunda kopam techukovadam…</p>
+                <p>Nenu ninnu tease cheyyadam…</p>
+                <p>Nuvvu permission adagakunda nee style lo rules pettadam… 😂</p>
+                <p>Nenu edo cheppagane nee face lo vachche aa expression…</p>
+                <p>Nenu konchem dooram velthunte nee edupu mokham…</p>
+                <p>Naa meeda jealous ayina sare bayata chupinchakunda act cheyyadam…</p>
+                <p>Tarvatha chinna reaction tho motham bayata petteseyadam…</p>
+                <p class="modal-highlight">Ivanni naa favourite memories. ❤️</p>
+                <p>Endukante mana prema ante naaku ippudu grand moments kaadhu…</p>
+                <p>Ilaanti chinna chinna vishayallo manam okarinokaram entha kalisipoyamo ade.</p>
+                <p>⸻</p>
+                <p>Oka roju…</p>
+                <p>Manam iddaram old aipotham.</p>
+                <p>Nenu appatiki kuda ninnu tease chesthune unta.</p>
+                <p>Nuvvu appatiki kuda…</p>
+                <p>“Bava, nuvvu maaravayya!” ani thittukuntu untav. 😂❤️</p>
+                <p>Mana hair colour maaripovachu…</p>
+                <p>Mana faces maaripovachu…</p>
+                <p>Mana bodies slow aipovachu…</p>
+                <p>Mana daggara unna technology maaripovachu…</p>
+                <p>Kani naaku oka vishayam maatram maarakudadhu.</p>
+                <p>Nuvvu edaina cheppali anipinchinappudu first Bava gurthuraavali.</p>
+                <p>Nee happiness lo…</p>
+                <p>Nee problems lo…</p>
+                <p>Nee decisions lo…</p>
+                <p>Nee fears lo…</p>
+                <p>Nee silly thoughts lo kuda…</p>
+                <p class="modal-gold">Bava ki oka permanent seat undali.</p>
+                <p>Nuvvu naatho anni cheppagalige freedom ni eppudu pogottukokudadhu.</p>
+                <p>Nenu nee lover ga undadam kanna…</p>
+                <p class="modal-highlight">Nee safest person ga undali anedi naaku ekkuva ishtam.</p>
+                <p>⸻</p>
+                <p>Bangaram…</p>
+                <p>Nenu nee life ni perfect ga chestha ani promise cheyyalenu.</p>
+                <p>Prathi problem ki solution istha ani kuda cheppalenu.</p>
+                <p>Kani oka maata maatram cheppagalanu…</p>
+                <p class="modal-gold">Nee problem vachinappudu ninnu alone ga feel avvanivvanu.</p>
+                <p>Nuvvu gelichina roju nee pakkana untanu.</p>
+                <p>Nuvvu odipoyina roju kuda nee pakkane untanu.</p>
+                <p>Nuvvu navvina roju nenu navvutha.</p>
+                <p>Nuvvu edchina roju…</p>
+                <p>Nee kanneellu aapadaniki mundu,</p>
+                <p>avi enduku vachayo vinadaniki try chestha.</p>
+                <p>Endukante ninnu marchipokunda chuskovadam ante…</p>
+                <p>Nee happy version ni maatrame premichadam kaadhu.</p>
+                <p class="modal-highlight">Nee complete version ni premichadam. ❤️</p>
+                <p>Nee kopam tho saha…</p>
+                <p>Nee pogaru tho saha…</p>
+                <p>Nee allari tho saha…</p>
+                <p>Nee bhayalatho saha…</p>
+                <p>Nee confusion tho saha…</p>
+                <p class="modal-gold">Nuvvu motham naaku kavali.</p>
+                <p>⸻</p>
+                <p>Oka chinna secret cheppana?</p>
+                <p>Nuvvu naaku ichina best gift…</p>
+                <p>Nee photos kaadhu.</p>
+                <p>Nee kisses kaadhu.</p>
+                <p>Nee vanta kaadhu.</p>
+                <p>Nee surprises kuda kaadhu.</p>
+                <p class="modal-highlight">“Bava” ani piliche nee voice. ❤️</p>
+                <p>Aa okka maata vinagane…</p>
+                <p>Naaku teliyakunda oka feeling vastundi—</p>
+                <p class="modal-gold">“Avunu… ee ammayi na life lo undi.”</p>
+                <p>Aa feeling chaalu.</p>
+                <p>Aa feeling kosame inka enno years ninnu love cheyyalani anipisthundi.</p>
+                <p>⸻</p>
+                <p>Naa Bangaram…</p>
+                <p>Mana story lo inka chala pages migili unnayi.</p>
+                <p>Konni pages lo navvulu untayi…</p>
+                <p>Konni pages lo fights untayi…</p>
+                <p>Konni pages lo tears untayi…</p>
+                <p>Konni pages lo trips untayi…</p>
+                <p>Konni pages lo family untundi…</p>
+                <p>Konni pages lo mana dreams untayi…</p>
+                <p>Inka konni pages lo…</p>
+                <p>“Maa Aavida…”</p>
+                <p>“Bava…”</p>
+                <p>“Mana pillalu…”</p>
+                <p>“Mana illu…”</p>
+                <p>“Mana life…”</p>
+                <p>ani untayi emo. ❤️</p>
+                <p>Aa pages ela raayalo naaku teliyadu.</p>
+                <p>Kani…</p>
+                <p class="modal-gold">Aa pages anni nee cheyyi pattukoni raayali.</p>
+                <p>Ade chaalu.</p>
+                <p>⸻</p>
+                <p>Naa Bangaram…</p>
+                <p>Nuvvu naa life lo vachina best incident kaadhu.</p>
+                <p class="modal-highlight">Nuvvu naa life ni marchina best feeling. ❤️</p>
+                <p>Nuvvu pakkana unte ordinary day kuda special aipothundi.</p>
+                <p>Nuvvu maatladithe silence kuda beautiful aipothundi.</p>
+                <p>Nuvvu navvithe naa day complete aipothundi.</p>
+                <p>Anduke…</p>
+                <p>Nuvvu naaku entha important ani nenu cheppadam kanna…</p>
+                <p>Oka roju nuvvu naa life ni venakki tirigi chusthe…</p>
+                <p class="modal-gold">“Ee Bava naa pakkana unnadu” ani feel ayithe…</p>
+                <p>Ade naa greatest achievement.</p>
+                <p>Naa Bangaram…</p>
+                <p>Naa life lo nuvvu undadam naa luck kaadhu…</p>
+                <p class="modal-highlight">naa life ki dorikina oka andamaina varam. ❤️</p>
+                <p class="modal-gold" style="text-align:center; margin-top:25px;">Eppatiki nee Bava. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Eppatiki nee Bava ❤️</h2>
+                <p class="modal-forever-tag">Nuvvu naaku oka anubhoothi 💫</p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- 2. Swargam Modal -->
+
+<div id="swargamModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('swargamModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+
+    <div class="modal-wrapper">
+
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Sweet Memories</span>
+
+                <h1>Ninna Nenu Choosina Swargam… ❤️</h1>
+
+                <div class="modal-sub-heading">Bangarammmmm…</div>
+            </header>
+
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Nenu chala rojula nundi anukunevadini…</p>
+                <p>Nuvvu naaku entha special o naaku telusu.<br>
+                Manam kalisi gadipina prathi moment entha beautiful o kuda telusu.</p>
+                <p>Kani…</p>
+                <p class="modal-highlight">Ninna naaku vachina anandam ela untundo maatram nenu eppudu oohinchaledu.</p>
+                <p>Life lo chala enjoyments chesanu…</p>
+                <p style="padding-left:15px;">
+                  • Long drives vellanu…<br>
+                  • Bike rides chesanu…<br>
+                  • Chala places chusanu…<br>
+                  • Chala happy moments experience chesanu…
+                </p>
+                <p>Kani ninna…</p>
+                <p class="modal-gold" style="font-size:1.2rem;">Nenu modatisari nijanga swargam chusanu.</p>
+                <p>Adi oka place kaadhu.</p>
+                <p>Adi oka moment kuda kaadhu.</p>
+                <p class="modal-highlight">Adi nuvvu nannu poorthiga nee lokam lo kalupukunnav ane feeling.</p>
+                <p>Ninna edho teliyani oka prapancham lo unnattu anipinchindi.</p>
+                <p>Manam iddaram veru veru manushulam ane feeling kuda oka kshanam ki ledu…</p>
+                <p class="modal-gold">“Manam iddaram okkate” ane oka teliyani anubhuthi.</p>
+                <p>Nuvvu nannu nee lokam lo ila kalupukunnav ane feeling…</p>
+                <p>Adi naa kallalo ippatiki nundi povatam ledu.</p>
+                <p>Ninna nee daggara unna aa kshanalu gurthosthe…</p>
+                <p>Naa face meeda teliyakunda navvu vastundi.</p>
+                <p>Endhukante aa roju nenu kevalam oka beautiful moment ni experience cheyyaledu…</p>
+                <p class="modal-highlight">Naa Bangaram tho inka daggara ayyanane feeling ni experience chesanu.</p>
+                <p>Nuvvu naa jeevitham lo entha important o…</p>
+                <p>Ninna adi inka deep ga ardham ayyindi.</p>
+                <p class="modal-gold" style="font-size:1.3rem; text-align:center; margin:25px 0;">Thank you Bangarammmmm… ❤️</p>
+                <p>Naa life lo intha andamaina feeling ni ichinanduku.</p>
+                <p>Nannu nee lokam lo intha daggaraga chesinanduku.</p>
+                <p>Ninna naaku ichina aa anandam kosam…</p>
+                <p class="modal-highlight">Thank you for everything. ❤️</p>
+                <p>Kani…</p>
+                <p>Oka chinna complaint undi… 😜</p>
+                <p>Bangaram… inka kavali anipisthundi. 😂❤️</p>
+                <p>Ninna choopinchina aa swargam nachindhi…</p>
+                <p>Chaaaala nachindhi.</p>
+                <p>Kabatti ee Bava ki malli aa swargam ki entry pass eppudu isthav? 😜❤️</p>
+                <p>Entry pass okkasari ichesi lifetime membership lekunda pampinchesthe ee Bava oppukodu madam! 😂</p>
+                <p>Lifetime membership kavali… one-time experience tho satisfy avvanu! 😜❤️</p>
+                <p>Please consider my request and approve at the earliest. 😌😂</p>
+                <p>Endhukante…</p>
+                <p>Ninna oka sari choosina aa swargam kanna…</p>
+                <p class="modal-gold">Nuvvu pakkana unte prathi roju ade swargam la undali anedhe naa korika. ❤️</p>
+                <p>Long drive aina…</p>
+                <p>Bike ride aina…</p>
+                <p>Oka chinna room lo iddaram maatladukovadam aina…</p>
+                <p class="modal-highlight">Naa Bangaram tho unte ade naa swargam. ❤️</p>
+                <p>Ninna oka kotha memory create ayyindi…</p>
+                <p>Kani naa korika okkate—</p>
+                <p>Aa memory ni mana jeevitham motham repeat cheskuntu, inka enno andamaina memories kalisi raasukundam. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>I Love You, Bangarammmmm. 🫶❤️</h2>
+                <p style="font-style:italic; font-size:1.1rem; color:#ff8fa3;">Yours lovingly,<br>Mee konchem greedy Bava 😜</p>
+                <div style="margin-top:25px; text-align:center;">
+                    <button onclick="alert('Request sent to Bangaram! 😜❤️')" style="background:linear-gradient(135deg,#ff0844 0%,#ffb199 100%); color:white; border:none; padding:14px 28px; border-radius:30px; font-weight:bold; cursor:pointer; font-size:1rem; box-shadow:0 6px 20px rgba(255,8,68,0.4);">
+                        Approve Entry Pass 🎟️
+                    </button>
+                </div>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- 3. Athamma Vanta Modal -->
+<div id="vantaModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('vantaModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Heartfelt Letter</span>
+                <h1>athamma vanta chinamma prema ❤️</h1>
+                <div class="modal-sub-heading">Athamma…</div>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:2;">
+                <p>Mee chethi chicken pulusu chaaaala ante chaaaala baagundi. ❤️</p>
+                <p>Kani nijam cheppalante… aa ruchikante aa vanta venaka unna prema na manasuni ekkuvaga thakindi.</p>
+                <p>Naa chinnappati nundi amma working mom avvadam valla, amma chethi tho chesina ruchikaramaina vanta tinna rojulu chala thakkuva. Anduke evaraina prema tho vandi petti tinipisthe aa feeling naaku chala special ga anipisthundi.</p>
+                <p>Kani aa roju meeru chesina chicken pulusu tinappudu enduko…</p>
+                <p class="modal-highlight">Naa manasuni evaro prema tho hattukunna feeling vachindi.</p>
+                <p>Aa chicken pulusu lo kevalam ruchi kaadhu…</p>
+                <p class="modal-gold">Oka intlo manishi kosam vandi pettina prema undi.</p>
+                <p>Chala rojulu nundi naa jeevitham lo chaala vishayalu nene handle cheskuntu vachanu. Evariki dooramga, andariki dooramga, enni kashtalu vachina nene bharisthu… ishtapadi brathakadaniki prayatninchanu.</p>
+                <p>Konni saarlu entha strong ga unna…</p>
+                <p>“Naa pakkana evaraina unte baagundedi…” ani anipinche moments kuda unnayi.</p>
+                <p>Kani ippudu…</p>
+                <p>Nenu eppudu ontariga anipinchina, em kashtam vachina, naa Bangaram naa daggaraki vachi…</p>
+                <p class="modal-highlight">“Bava… nenu unna.” ani cheppinattu anipisthundi.</p>
+                <p>Nenu intini miss ayithe…</p>
+                <p class="modal-gold">Athamma chethi special vanta dorukutundi.</p>
+                <p>Ammani miss ayithe…</p>
+                <p class="modal-gold">Amma la naa Bangaram chupinche prema dorukutundi.</p>
+                <p>Nenu daari thappithe…</p>
+                <p>Naa Bangaram nanna la karra pattukoni daari chupisthundi. 😄❤️</p>
+                <p>Kani ee madhya naa Bangaram na meedha chupisthunna care…</p>
+                <p>Adi maatram naaku chala kothaga anipisthundi.</p>
+                <p>Naa jeevitham lo evaru nannu ala chusukunna feeling naaku eppudu raledu.</p>
+                <p>Anduke konni sarlu…</p>
+                <p>“Nijanga nenu inta care ki arhuda?” ani kuda anipisthundi.</p>
+                <p>Adi entha kothaga undho…</p>
+                <p>Anthe andamga undi.</p>
+                <p>Swargam ante ekkado paina undadu emo…</p>
+                <p>Manalni manamga accept chese vaallu pakkana unte…</p>
+                <p>Mana aakali gurthupettukoni vandi pette vaallu unte…</p>
+                <p>Mana baadha cheppakundane ardham chesukune vaallu unte…</p>
+                <p class="modal-gold">Ade swargam emo.</p>
+                <p>Athamma…</p>
+                <p>Mee chicken pulusu tinna aa roju naaku oka vishayam ardham ayyindi.</p>
+                <p>Naa life lo nenu edurukunna kashtalu entha unna…</p>
+                <p>Ippudu naa venaka nilabade manushulu unnaru.</p>
+                <p class="modal-highlight">Naa Bangaram undi.</p>
+                <p class="modal-highlight">Tana prema undi.</p>
+                <p class="modal-highlight">Tana amma laanti care undi.</p>
+                <p class="modal-highlight">Mee chethi vanta lo unna aa prema undi.</p>
+                <p>Anduke ippudu naaku oka kotha dhairyam vachindi…</p>
+                <p class="modal-gold" style="font-size:1.2rem;">“Entha pedda kashtam vachina sare… nenu gelustha.”</p>
+                <p>Endhukante ippudu nenu kevalam naa kosam brathakadam kaadhu…</p>
+                <p>Nannu intha premaga chusukune vaalla kosam kuda gelavali.</p>
+                <p>Aa roju chicken pulusu tinna tarvatha naa kadupu nindindho ledo teliyadu…</p>
+                <p>Kani…</p>
+                <p class="modal-highlight">Naa manasu maatram chala rojula tarvatha poorthiga nindindi. ❤️</p>
+                <p>Bagundiiii Athamma… chaaaala baagundi.</p>
+                <p>Chicken pulusu kanna…</p>
+                <p class="modal-gold">Daanilo meeru pettina prema inka baagundi. ❤️</p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Thank you, Athamma. ❤️</h2>
+                <p>Naa Bangaram ni naaku ichinanduku maatrame kaadhu…</p>
+                <p class="modal-forever-tag">
+                    Naa jeevitham lo naaku teliyakunda oka “illu” ane feeling ni kuda ichinanduku. ❤️
+                </p>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- 4. Destiny Modal -->
+<div id="destinyModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('destinyModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Destiny</span>
+                <h1>✨ Maybe This Is What Destiny Means… ❤️🕉️</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_8198.jpeg" alt="Sai Baba Sannidhi" class="featured-large-img" onerror="this.style.display='none'">
+                <p>Bangaram…</p>
+                <p>Konni sarlu nenu alochisthunta…</p>
+                <p>Destiny ante idhe emo.</p>
+                <p>Sai Baba manaki nijanga em kavalo, eppudu kavalo, ela ivvalo ayanake baga telusu ani antaru…</p>
+                <p>Ee roju aa maata nijame anipisthundi.</p>
+                <p>Naa past lo jarigina konni sanghatanala valla…</p>
+                <p>Nenu mellaga Sai Baba ni nammadam tagginchesanu.</p>
+                <p>Namaskaram cheyyadam kuda almost manesanu.</p>
+                <p>Kani…</p>
+                <p>Nuvvu naa jeevitham loki vachaka…</p>
+                <p>Naa manasulo oka chinna korika puttindi.</p>
+                <p>Oka roju…</p>
+                <p>Nee cheyyi naa chethilo pattukoni…</p>
+                <p>Sai Baba gudi ki vellali.</p>
+                <p>Aayana mundhu nilabadi…</p>
+                <p>“Baba… ee Bangaram ni ela aina naa jeevitham loki naa bharya ga teesukuraandi…” ani adagalani.</p>
+                <p>Kani appudu nuvvu…</p>
+                <p>“Baba mandiram ki vasthe intlo telisipothundi…” annappudu…</p>
+                <p>Enduko teliyani baadha.</p>
+                <p>Konchem benga.</p>
+                <p>Konchem bhayam.</p>
+                <p>Aa roju naaku anipinchindi…</p>
+                <p>Baba kuda manalni pilavaledemo ani.</p>
+                <p>Kani…</p>
+                <p>Manam alochinchindhi okati…</p>
+                <p>Aayana alochinchindhi inkokati.</p>
+                <p>Konni nelala tarvatha…</p>
+                <p>Evaru uhinchani vidhamga…</p>
+                <p>Ade Sai Baba…</p>
+                <p>Maniddarini tana sannidhi daggaraki pilichadu.</p>
+                <p>Manam kalisi aayana kalla mundhu nilabadam…</p>
+                <p>Naaku adhi oka coincidence la anipinchaledu.</p>
+                <p>Adhi…</p>
+                <p>Aayana pilupu la anipinchindi.</p>
+                <p>Aa roju nenu oka nammakam pondanu.</p>
+                <p>Manam kalavadam…</p>
+                <p>Manam kalisi Baba sannidhi ki velladam…</p>
+                <p>Ivanni oorike jarigina sanghatanalu kaavu.</p>
+                <p>Aayana rasina daari lo jarigina adugulu.</p>
+                <p>Appati nundi naa nammakam inkonchem balam ayyindi.</p>
+                <p>Ee janmalo maatrame kaadhu… enni janmalu unna… ee Bava nee cheyyi vadaladu.</p>
+                <p>Endhukante…</p>
+                <p>Sai Baba vadalanivvaru ani naa nammakam.</p>
+                <p style="font-size:18px; font-weight:bold; color:#ffedd5; text-align:center; margin-top:20px;">Om Sai Ram. ❤️🙏</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 5. Gorintaku Modal -->
+<div id="gorintakuModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('gorintakuModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Gorintaku</span>
+                <h1>🌿 Bangaram ❤️</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <div style="text-align:center; margin-bottom:20px;">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7711.jpeg" alt="Gorintaku" class="featured-large-img" onerror="this.style.display='none'">
+                </div>
+                <p>Ee roju nuvvu gorintaku pettukunnav ani telisinappati nundi naa mind lo okate alochana tirugutundi… adi entha baaga panduthundo ani. Kani nijam cheppalante, adi ela pandina naa prema matram eppatiki taggadu. Ninnu life-long chala happy ga, muddu ga, jagrathaga chusukunta.</p>
+                <p>Chinnappudu maa mummy ki maa daddy gorintaku pettadam chusthe chala cute ga anipinchedi. Appudu andaroo oka maata cheppevaaru – “Gorintaku baaga pandithe manchi mogudu vasthadu.” Aa maata vinnappudalla, “Naa bharya ekkado untundi… eppudu naa life loki vasthundi?” ani alochinchevadni.</p>
+                <p>Ee roju aa kalaki roopam nuvve, naa Bangaram. ❤️</p>
+                <p>Ippudu naa manasulo oka korika maatrame undi… okaroju nenu nee chethullo gorintaku pettali. Nuvvu naa eduruga kurchoni navvuthu unte, nenu prati line ni prema tho geeyali. Aa gorintaku kanna ekkuvaga, naa prema nee chethullo nilichipovali.</p>
+                <p>Na jeevitham lo naku oka korika, mana pelli taruvatha nenu nee chethiki gorintaku pette aa andamaina roju kosam nenu veyi kallatho kaadu… laksha kallatho eduruchusthunna.</p>
+                <p>Gorintaku rangu konni rojule untundi… kani nee meeda naa prema matram ee janmaki kaadu, prati janmaki untundi.</p>
+                <p><b>Love you forever, naa Bangaram. 💜</b></p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 6. Bava's Promise Modal -->
+<div id="bavasPromiseModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('bavasPromiseModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Promise</span>
+                <h1>🛡️ Bava's Promise: Nenu Unnanu</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9; font-size:16px;">
+                <p>Bangaram… ❤️</p>
+                <p>Nuvvu ippudu entha tension lo, entha bayapaduthunnavo naku telusu. Kani okka maatram gurthupettuko… nuvvu okkadive kaadhu. Nee Bava ikkade unnadu.</p>
+                <p>Ee engagement fix ayindani mana prema aipoyindani kaadhu. Idi mana journey lo oka kashtamaina adugu anthe. Kashtalu vachinappude mana prema entha balamga undo prapanchaniki telustundi.</p>
+                <p>Dayachesi edavaku… bhayapadaku… nee health ni paaduchesukoku. Nuvvu strong ga unte nenu inka strong ga fight cheyagalanu. Mana iddaram kalisi ee situation ni edurukundam. Oka adugu nuvvu… oka adugu nenu… mana iddaram kalisi munduku veldham.</p>
+                <p>Ninnu evaru ardham chesukokapoyina parledhu… nenu ardham chesukunta. Ninnu evaru nammakapoyina parledhu… nenu nammutanu. Ninnu evaru vadili vellipoina… nee Bava eppatiki vadili velladu.</p>
+                <p>Nuvvu navvuthu naa pakkana nilabade roju kosam nenu prathi roju poradatanu. Ee poratam mana iddaridhi… nuvvu matrame kaadu.</p>
+                <p>Naa cheyyi pattuko Bangaram… migathadi Bava chusukuntadu. ❤️</p>
+                <p style="font-size:18px; font-weight:bold; color:#f472b6; text-align:center; margin-top:20px;">Love you… Forever and Always. 💜</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 7. Artist Modal -->
+<div id="artistModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('artistModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Art</span>
+                <h1>🎨 The Artist Behind the Canvas</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <div style="text-align:center; margin-bottom:20px;">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7883.jpeg" alt="Bangaram's Painting" class="featured-large-img" onerror="this.style.display='none'">
+                </div>
+                <p>Bangaram… ❤️</p>
+                <p>Ee painting ni first time chusina kshanam nenu oka nimisham maatladalekapoyanu. Idi oka painting kaadhu… nee manasu geesina oka prapancham.</p>
+                <p>Aa konda anchuna okka chettu… aa pakkana jaabili… aa akasham lo unna nisshabdham… ivanni chustunte nee alochanalu entha andamga untayo ardham avuthundi. Nee manasu entha kalmasham lenidho, entha prashanthamga untundo ee painting chepthundi.</p>
+                <p>Nijanga cheppalante… nuvvu intha andamga paintings vesthav ani naaku teliyadu. Ee roju nee kala ni chusi nenu garvapaduthunnanu. Oka roju retirement tarvatha ventane nee paintings ki oka exhibition pettistha. Nee kala ni ee prapancham motham chupistha.</p>
+                <p>Naaku eppudaina devudu oka varam ichi, aa painting loki vellagalige avakasam isthe… nenu aa konda anchuna nee pakkane kurchoni, aa jaabili ni kalisi chusthu untanu. Endukante aa prapancham nuvvu geesindhi… aa prapancham lo naa Bangaram untundi.</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 8. Athamma Love Modal -->
+<div id="athammaModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('athammaModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Athamma</span>
+                <h1>❤️ Athamma Love</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Athamma… ❤️</p>
+                <p>Ninna first time maa Athamma chethi vanta tinnanu… Ullipaya Pulusu. Chinnappudu first time oka friend lunch box lo aa ruchi tinna appudu vachina aa unforgettable feeling… inni samvatsarala tharuvatha malli ninna maa Athamma chethi vanta lo nundi vachindi.</p>
+                <p>Gatha 6 months nundi amma chethi vanta ni chala miss avthunnanu. Kani ninna aa first mudda tinna ventane aa lotu, aa baadha motham oka kshanam lo marchipoyindi. Aa ruchi lo prema undhi… aa prema lo amma gurthochi santhoshapadadam.</p>
+                <p>Maa Athamma ante naaku chala abhimanam. Adi kevalam tana chethi vanta vallane kaadhu. Naa mental Bangaram ni, tana kopam ni, tana tikka ni, tana allari ni antha prema tho bharinchi, jagrathaga chusukuntunnaru. Adhe naa Athamma meeda naaku unna gauravam, prema ki pedda reason.</p>
+                <p>Nee paintings padesindi ani Athamma meedha kuda konchem kopam vachindi. Kani ventane oka vishayam gurthochindi… aa Athammae naaku naa Bangaram ni icharu. Anduke aa kopam kuda prema ga maaripoyindi.</p>
+                <p>Anduke, nenu oka alludiga maa Athamma chethi vanta tinali ane korika kanna… oka koduku la maa Athamma kosam naa chethula tho vandi petti, “Athamma, meeru ippudu rest teesukondi” ani cheppalane korika naaku ekkuva.</p>
+                <p>Naaku naa Bangaram ni ichina maa Athamma ki nenu life-long runapadi untanu. Ee runam eppatiki theeradu.</p>
+                <p>Sorry Athamma… ❤️ meeru lekapothe na bangaram na jeevitham loke radu kani thittesa vadi meeda prema tho. Thank you so much, Athamma… ❤️</p>
+                <p>Meeru maa Bangaram ni ela prema tho pencharo, alane nenu kuda tana ni life-long happy ga, jagrathaga chusukunta ani maatistunnam.</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 9. Two Worlds Modal -->
+<div id="twoworldsModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('twoworldsModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Memory</span>
+                <h1>📸 Two Worlds, One Frame</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/F7F8B384-C1B4-42CD-BA56-AAC8C5CA675B.png" alt="Two Worlds One Frame" class="featured-large-img" onerror="this.style.display='none'">
+                <p>Bangaram… ❤️</p>
+                <p>Ee photo chustunte na kallallo automatic ga neellu vasthunnayi. Ee okka frame lo na prapancham motham undi. Oka pakkana nannu ee lokaniki thechhina amma… inko pakkana nenu malli navvadam, preminchadam, brathakadam nerpinchina nuvvu. Na jeevitham lo entha pedda adrustam undo ee okka kshanam naku ardham ayyindi.</p>
+                <p>Nenu eppudu ila oka roju vasthundani kuda anukoledu. Na hrudayam ki atyanta priyamaina iddaru oka chota, oka frame lo, oka samudram mundu ila kurchoni matladukuntunnaru ani chustha ani kalalo kuda anukoledu. Aa moment ni chusina ventane na manasu lo oka teliyani santhosham, oka prasanthatha, oka tripthi vachayi. Aa feeling ni words lo describe cheyyadam almost impossible.</p>
+                <p>Bangaram… nuvvu na life loki vachaka prema ante enti, care ante enti, family ante enti ane artham malli nerchukunna. Amma naku modati jeevitham ichindi… kani nuvvu na jeevithaniki malli oka kottha artham ichav. Oka manishi life lo konni moments untayi… avi entha rojulu gadichina marchipolem. Ee photo alanti oka amoolyamaina gnapakam.</p>
+                <p>Naku future lo em jaruguthundo teliyadu. Mana journey ela untundo kuda teliyadu. Kani okati matram nijam… ee rojuna nenu chusina ee drushyam na hrudayam lo eppatiki cherigiponi gurthuga untundi. Nuvvu na pakkana unna, lekapoyina… nenu ekkada unna… jeevitham ela marchina… ee okka memory ni evaru na daggara nundi theesukoleru.</p>
+                <p>Nuvvu na kosam chesina ee okka pani ki nenu life antha grateful ga untanu. Endukante idi oka photo kadhu… idi na rendu prapanchalu kalisina kshanam. Na janmaki karanam aina amma, na brathukuki malli velugu techina nuvvu… iddaru oka frame lo undadam naku oka blessing kanna thakkuva kaadhu.</p>
+                <p>Thank you Bangaram… ❤️</p>
+                <p>Ee gift ni nenu eppatiki marchipolenu. Oka roju na gurinchi anni memories marchipoyina sare, ee photo ni chusina prathi sari na hrudayam malli ade prema, ade santhosham, ade kruthagnatha tho nindipothundi. Ee okka kshanam kosam kuda nenu devudiki life antha thanks cheptha. Ee photo lo unnadi iddaru women kaadhu… na jeevitham ni poorthi chesina na rendu praanalu. 🤍</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 10. Amma's Word & Promise Modal -->
+<div id="ammaPromiseModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('ammaPromiseModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Promise</span>
+                <h1>✨ Amma's Word & My Promise</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Bangaram… ❤️</p>
+                <p>Ee photo taruvatha na hrudayam lo inkoka unforgettable moment jarigindi. Amma natho oka mata annappudu naku oka second goosebumps vachayi. Amma navvuthu, chala prema tho, “Eppudu na kodalni intiki thesukosthav ra?” ani adigindi. Aa okka question lo entha prema undo, entha aasa undo, entha accept chesindo naku ardham ayyindi. Aa mata vinnappudu nenu silent ga unna… kani na manasu lo matram oka promise chesukunna. Ela aina sare… enni kashtalu vachina sare… aa mata ni nenu tappakunda nijam chestha.</p>
+                <p>Bangaram… nijam cheppali ante, amma ki nuvvu ante chala ishtam. Kodalu ani maatladithe aavida kallallo kanipinche aanandam chusthe naaku chala emotional ga anipisthundi. Nuvvu gurinchi cheppina prathi sari aavidani face lo oka navvu untundi. Ninnu kalisina tharwataha aa ishtam inka ekkuva ayyindi. Nuvvu maatladina vidhanam, nuvvu chupinche maryadha, prema, simplicity… ivanni aavidani chala touch chesayi. Amma ninnu kodalu ga kaadu Bangaram… intlo oka ammayi laga, tana sontha kuthuru laga chusthundani naku clear ga ardham ayyindi.</p>
+                <p>Nenu chinnappati nundi amma kosam chala kalalu chusanu. Kani ee roju na biggest dream enti ante… oka roju ninnu amma pakkana chusi, aavida ninnu “maa kodalu” ani pilavadam. Aa pilupu vinadaniki nenu entha wait chesthunano nake telusu. Aa roju vaste, adi na life lo biggest achievement untundi. Money, success, status… ivanni okavaipu. Amma santhosham, nuvvu santhosham… avi okavaipu.</p>
+                <p>Bangaram… nenu eppudu oka mata cheptha kada… “Nuvvu na life loki vachaka nenu complete ayya.” Adhi nijame. Kani ninnu maa intlo andharu prema tho accept chesi, amma ninnu tana kodalu ani piliche roju… appude na jeevitham poorthiga completeavutundi.</p>
+                <p>Nenu devudini okkate korukuntunna… mana madhya vachche prathi problem ni manam kalisi datali. Evaraina oppose chesina, situations ela unna, time entha test chesina… nenu oka adugu kuda venakki veyyanu. Endukante idi na prema kosam matrame kaadu… amma kalani nijam cheyyadam kosam kuda.</p>
+                <p>Bangaram… oka promise. Oka roju amma adigina aa mata nijam avutundi. Aavida eduruchusthunna aa kodalu nuvve avuthav. Nenu aa roju kosam entha kastam aina padatha. Endukante aa roju amma navvu, nee kallallo aanandam… avi rendu kalisi chuse adrustam kante pedda gift na jeevitham lo inkoti undadu.</p>
+                <p>Aa roju vachaka… ee photo oka beautiful memory kaadhu. Mana jeevitham mothaniki starting chapter ani cheppukuntam. ❤️</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 11. Restaurant Modal -->
+<div id="restaurantModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('restaurantModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">First Date</span>
+                <h1>🍽️ Our First Restaurant Together… ❤️</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/BA48DB10-3EB7-4029-8F67-DFC7EFCC7F34.png" alt="Our First Restaurant Together" class="featured-large-img" onerror="this.style.display='none'">
+                <p>Bangaram…</p>
+                <p>Jeevitham lo konni gnapakalu chinnave ayina… mana hrudayam lo maatram chala pedda sthanam sampadinchukuntayi.</p>
+                <p>Mana iddaram kalisi first time oka restaurant ki vellina aa roju… alanti oka andamaina gnapakam.</p>
+                <p>Naa chethilo nee cheyyi pattukunna aa kshanam nundi… naa manasu okkate cheppindi…</p>
+                <p>“Ee ammayini ilane jeevitham antha jagrathaga chuskovali.”</p>
+                <p>Road cross chesthunna…<br>Janam madhyalo nadusthunna…</p>
+                <p>Ekkada evaraina tagulutharemo… ekkada naa Bangaram ki ibbandi avuthundemo ani, oka chinna pillani kapadukunnattu ninnu naa pakkane teesukoni nadichanu.</p>
+                <p>Nee cheyyi pattukoni nadusthunna aa feeling…</p>
+                <p>Adhi prema kaadhu…</p>
+                <p>Adhi baadhyatha. Adhi naa prapancham ni pattukoni nadusthunna feeling.</p>
+                <p>Restaurant lo mana iddaram pakka pakka kurchunnappudu… samayam aagipoyinattu anipinchindi.</p>
+                <p>Neeku kosari kosari muddalu peduthu tinipinchadam…<br>“Inka konchem thinu Bangaram…” ani cheppadam…<br>Nee kadupu nindindani telisinappudu naaku vachina aanandam…</p>
+                <p>Adhi naa kadupu nindina santhosham kanna ekkuva.</p>
+                <p>Endhukante…</p>
+                <p>Nee santhosham eppatinuncho naa santhosham aipoyindi.</p>
+                <p>Nuvvu navvuthu maatladuthunte…</p>
+                <p>Nee kallalo unna aa amayakathvam…<br>Aa chinna pilla la innocence…<br>Aa navvu…</p>
+                <p>Naa gundello eppatiki cherigiponi gnapakam aipoyayi.</p>
+                <p>Nijam cheppalante…</p>
+                <p>Restaurant lo unna vallandariki food kanna ekkuvaga naa Bangaram meedhe drushti undemo anipinchindi.</p>
+                <p>Kani nenu maatram garvapaddanu.</p>
+                <p>Endhukante…</p>
+                <p>Aa andamaina navvu naa pakkana kurchoni undhi.</p>
+                <p>Aa roju nenu oka maataki maatichukunna…</p>
+                <p>Naa Bangaram eppudu “Bava…” ani edaina adigithe… naa daggara “Ledhu” ane maata undakudadhu.</p>
+                <p>Naa korikalu chala peddavi kaavu.</p>
+                <p>Prathi weekend oka kottha place ki teesukellali…</p>
+                <p>Prathi journey lo nee cheyyi naa chethilo undali…</p>
+                <p>Bike meedha nuvvu naa venaka kurchoni, naa bhujam meedha tala pettukoni navvuthu maatladali…</p>
+                <p>Mana madhya maatalu eppudu aipokudadhu.</p>
+                <p>Mana navvu eppudu taggakudadhu.</p>
+                <p>Ee andamaina prapancham lo unna prathi road…<br>Prathi beach…<br>Prathi hill…<br>Prathi sunset…<br>Prathi restaurant…</p>
+                <p>Naa Bangaram tho kalisi oka andamaina gnapakam ga marchali.</p>
+                <p>Endhukante…</p>
+                <p>Naaku ee prapancham chupinchalani ledu… naa Bangaram ki ee prapancham motham chupinchali.</p>
+                <p style="font-size:18px; font-weight:bold; color:#fef3c7; text-align:center; margin:25px 0;">A Promise to My Bangaram ❤️</p>
+                <p>Nee cheyyi pattukunna aa roju nenu oka promise chesukunna…</p>
+                <p>Nee kallalo aanandam thappa vere emi undakudadhu.</p>
+                <p>Nee kadupu eppudu aakali tho undakudadhu.</p>
+                <p>Nee manasu eppudu ontariga anipinchakudadhu.</p>
+                <p>Nee navvu eppudu taggakudadhu.</p>
+                <p>Naa jeevitham lo unna ati pedda korika okkate…</p>
+                <p>Nee cheyyi pattukoni, bike meedha navvuthu, kaburlu cheppukuntu, ee prapancham motham kalisi chudali.</p>
+                <p><b>Adhe naa kala… adhe naa jeevitham… adhe naa Bangaram. ❤️</b></p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 12. Photo Frame Modal -->
+<div id="frameModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('frameModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">First Frame</span>
+                <h1>🖼️ My First Photo Frame… ❤️</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Bangaram…</p>
+                <p>Chinnappati nundi naaku oka chinna korika undedhi…</p>
+                <p>Naa room lo oka photo frame undali ani.</p>
+                <p>Kani oka vishayam maatram nenu eppudu decide ayyi unnanu…</p>
+                <p>Naa jeevitham lo nenu naa photo ni kuda eppudu frame kattinchukoledu.</p>
+                <p>Endhukante…</p>
+                <p>Naa first photo frame lo undalsindhi nenu kaadhu… naa Bangaram.</p>
+                <p>Aa alochana endhuko naaku chala ishtam.</p>
+                <p>Naa mundhu prathi roju naa photo kaadhu…</p>
+                <p>Naa Bangaram navvuthu undali.</p>
+                <p>Aa navvu chusthu podduna levali.</p>
+                <p>Aa navvu chusthe roju motham baaguntundani nammutanu.</p>
+                <p>Ee roju…</p>
+                <p>Aa chinnappati korika nijamaindi.</p>
+                <p>Naa chinna podarillu lo…</p>
+                <p>Naa Bangaram photo frame ni pettina aa kshanam…</p>
+                <p>Naa manasu nindipoyindi.</p>
+                <p>Kallu kuda nindipoyayi.</p>
+                <p>Baadha tho kaadhu…</p>
+                <p>Santhosham tho.</p>
+                <p>Konni sarlu aa frame mundhu nilabadi choosthu untanu.</p>
+                <p>“Oka photo ki intha pranam untundha?” ani anipisthundi.</p>
+                <p>Kani adi photo kabatti kaadhu…</p>
+                <p>Adhi naa Bangaram kabatti.</p>
+                <p>Ee roju frame lo navvuthu unna nuvvu…</p>
+                <p>Oka roju naa eduruga, ade navvutho, ade kallatho, naa intlo tiruguthu unte…</p>
+                <p>Adhe naa jeevitham lo ati pedda santhosham.</p>
+                <p style="font-size:18px; font-weight:bold; color:#fef3c7; text-align:center; margin:25px 0;">A Small Promise… ❤️</p>
+                <p>Naa first photo frame… nuvve.</p>
+                <p>Naa first choice… nuvve.</p>
+                <p>Naa chivari choice kuda… nuvve.</p>
+                <p>Frame lo unna nee navvu prathi roju naaku oka gurthuchepthundi…</p>
+                <p><b>“Naa Bangaram ni eppatiki ilane navvinchali.” ❤️</b></p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 13. Gallery Modal -->
+<div id="galleryModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('galleryModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Gallery</span>
+                <h1>📸 Our Beautiful Memories</h1>
+            </header>
+            <div class="modal-content">
+                <div class="gallery-grid">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7216.png" alt="Memory 1" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7232.jpeg" alt="Memory 2" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7233.jpeg" alt="Memory 3" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7247.jpeg" alt="Memory 4" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7248.jpeg" alt="Memory 5" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/dineshesarapu/bangaram/main/IMG_7685.png" alt="Memory 6" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 14. Location Modal -->
+<div id="locationModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('locationModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Special Place</span>
+                <h1>📍 Our First Kiss ❤️</h1>
+            </header>
+            <div class="modal-content" style="text-align:center;">
+                <p style="font-size:20px; font-weight:500; margin:20px 0;">17.793139, 83.389763</p>
+                <a href="https://maps.google.com/?q=17.793139,83.389763" target="_blank" class="location-btn">
+                    ❤️ Open Our Special Place ❤️
+                </a>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 15. Life Thoughts Modal -->
+<div id="thoughtsModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('thoughtsModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Thoughts</span>
+                <h1>🍂 Bava's Words: Life Thoughts</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9; font-size:16px;">
+                <p>Konni parichayalu mana jeevithamlo oka season la vastayi…</p>
+                <p>Konni maatram mana jeevithanne maarche oka varam la untayi.</p>
+                <p>Prathi manishi mana life lo undipovadaniki raadu. Konthamandhi navvinchadaniki vasthaaru… konthamandhi edupuki artham cheppadaniki vasthaaru… inkonthamandhi nammakam ante ento nerpisthaaru… mari inkonthamandhi, nammina manishi baadha pedithe entha noppi untundo chupisthaaru.</p>
+                <p>Modatlo nenu kuda anukunna… okkasari mana vaallu ayithe eppatiki mana vaallene ani.</p>
+                <p>Kani jeevitham oka andamaina nijam nerpinchindi.</p>
+                <p><b>“Manushulu maarochu… paristhithulu maarochu… kaani mana manasu manchi ga undadam maatram mana chethullo untundi.”</b></p>
+                <p>Aakasam meedha meghalu vasthai… vellipothayi. Vaanalu padathayi… aagipothayi. Pidugulu padathayi… kani aakasam eppudu tana andham ni kolpodhu.</p>
+                <p>Manishi jeevitham kuda alane.</p>
+                <p>Eeroju nee pakkana nadiche vaallu… repu dooram avvachu. Eeroju ninnu ardham chesukunna vaallu… repu ninnu apardham chesukovachu. Eeroju ninnu praanam kanna ekkuva preminchina vaallu… repu oka gnapakamga migilipovachu.</p>
+                <p>Kani…</p>
+                <p>Vaallu maarinanduku nuvvu maaripovalsina avasaram ledu.</p>
+                <p>Nee manchi thanam okari pravarthana kosam kolpoku. Nee navvu okari nirnayam kosam aapaku. Nee prema okari thappu valla dvesham ga maaranivvaku.</p>
+                <p>Endhukante…</p>
+                <p>Ee prapancham lo nuvvu evarini kolpoyina, malli pondochu. Kani okkasari ninnu nuvvu kolpothe… aa gelupu chala kashtam.</p>
+                <p>Kabatti nee manasuni jagrathaga chusuko. Danni kopam tho kaadhu… prema tho nimpuko. Baadha tho kaadhu… aasha tho nimpuko. Dvesham tho kaadhu… manchi gnapakalu tho nimpuko.</p>
+                <p>Oka roju nuvvu venakki tirigi ee rojulu gurthuchesukunte…</p>
+                <p>Edchina rojulu kaadhu gurthosthayi…</p>
+                <p><b>Aa baadhani daati navvina nee dhairyam gurthosthundi.</b></p>
+                <p>Aa roju ardham avuthundi…</p>
+                <p>Jeevitham ante andarini nilabettukovadam kaadhu… manalni manam kolpokunda munduku nadavadam ani.</p>
+                <p>Gurthupettuko… ❤️</p>
+                <p>Konni manushulu mana kathalo oka chapter maatrame…</p>
+                <p>Kani…</p>
+                <p><b>Nuvvu maatram nee jeevitham mothaniki hero.</b></p>
+                <p>Nee manasu nee nijamaina balam. Danni eppudu evarikosam kolpoku.</p>
+                <p style="font-size:18px; font-weight:bold; color:#f472b6; text-align:center; margin-top:20px;">Itlu bava ❤️</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 16. Heart Letter Modal -->
+<div id="heartModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('heartModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">Love Letter</span>
+                <h1>📝 A Little Piece of My Heart</h1>
+            </header>
+            <div class="modal-content" style="text-align:justify; line-height:1.9;">
+                <p>Bangaram,</p>
+                <p>Ninnu entha preminchutunnano naake teliyadu. Naa manasulo nee meeda unna prema ni maatallo poorthiga cheppadam chaala kashtam. Kani okati maatram nijam… naa prathi alochana chivariki vacchi aagedi nee daggare.</p>
+                <p>Nee kallu ante naaku praanam. Neredu pandla laanti aa andamaina kallu… entho expressive ga untayi. Maatalu lekundane enno kaburlu cheptayi. Konni rojulu nee photo chustune nidrapoyanu. Inkonni rojulu nee photo ni gundelaki daggara pettukoni, nee kallatho maatladuthu gadipanu. Nuvvu vinakapoyina, aa kallu maatram naa prathi maata vini navvinattu anipistundi. Anta ishtam naaku nee kallante.</p>
+                <p>Alage nee mukku… vere vallaki adi ela kanipinchina naaku maatram prapanchamlo andamaina mukku ade. Endukante adi naa Bangaramdi. Adi chusthe oka chinna muddu ivvalanipistundi. Prathi sari aa avakasam dorakakapoyina, aa korika maatram eppudu taggadu. Adi perfect kaakapoyina, naa drustilo perfect gaane untundi. Endukante adi naa Bangaramdi mukku.</p>
+                <p>Mari nee pedhavulu… dooram nunchi chusina sare naa manasu okkasari aagipothundi. Aa navvu, aa pink color, aa chinna andam… anni kalisi nannu malli malli nee vaipu laagutayi. Anduke vatiki nenu oka cute peru kuda pettanu — <b>Chinky Minky</b>. Aa peru vinagane naaku navvu vastundi, endukante adi naa prema ki oka chinna secret laga anipistundi.</p>
+                <p>Nee gurinchi alochinchina prathi sari naa hrudayam oka kottha aanandamtho nindipothundi. Nuvvu naa jeevithamlo unna prathi roju, prathi nimisham, prathi gnapakam naaku oka viluvaina kanukaga untundi. Nuvvu naaku entha specialo, aa vishayam maatallo poorthiga cheppalekapoyina, naa prema prathi roju, prathi chinna gesture lo kanipistune untundi.</p>
+                <p><b>Love you, Bangaram ❤️</b></p>
+                <p>Nenu chachipoi paike vella varuku ee message ikkade untundi. Ee message nuvvu chusina roju, <b>"Nenu chusanu"</b> ani naaku cheppali. Appati varaku nenu ee vishayam gurinchi neeku cheppanu. Aa okka maata kosam nenu eduruchusthuntaanu. ❤️</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!-- 17. 6 Months Blog Modal -->
+<div id="blogModal" class="modal-overlay">
+    <button class="modal-close-btn" onclick="closeModal('blogModal')">✕</button>
+    <div class="modal-bg-slideshow"><div class="modal-slide"></div><div class="modal-slide"></div></div>
+    <div class="modal-bg-overlay"></div>
+    <div id="modal-heart-particles"></div>
+    <div class="modal-wrapper">
+        <article class="modal-blog-card">
+            <header>
+                <span class="modal-badge">6 Months Anniversary</span>
+                <h1>Six Months… Yet It Feels Like I’ve Known You Forever. ❤️</h1>
+                <div class="modal-sub-heading">Bangaram…</div>
+            </header>
+            <div class="modal-content">
+                <p class="modal-highlight">Eeroju mana journey ki 6 months.</p>
+                <p>Aru nelalu…</p>
+                <p>Cheppadaniki chinna number.</p>
+                <p>Kani aa aru nelallo nenu jeevitham motham gurthupettukune gnapakalu sampadinchanu.</p>
+                <p>Konni rojulu navvinchayi…</p>
+                <p>Konni rojulu edpinchayi…</p>
+                <p>Konni rojulu kopam theppinchayi…</p>
+                <p>Konni rojulu nammakam penchayi…</p>
+                <p class="modal-gold">Kani oka roju kuda ninnu takkuvaga preminchaledu.</p>
+                <p>Ninnu kalisaka naaku ardham ayindi…</p>
+                <p>Prema ante pedda pedda gifts kaadhu… pedda pedda maatalu kaadhu… <strong class="modal-highlight">chinna chinna kshanalu</strong>.</p>
+                <ul>
+                    <li>Nee navvu chusthu coffee tagadam…</li>
+                    <li>Nee cheyyi pattukoni road cross cheyyadam…</li>
+                    <li>Restaurant lo neeku muddalu peduthu “inka konchem thinu” ani cheppadam…</li>
+                    <li>Nee vesina painting lo nee manasuni choodadam…</li>
+                    <li>Nee photo ni naa jeevitham lo first frame ga pettukovadam…</li>
+                    <li>Nee Athamma chethi vanta tini amma gurthochi santhoshapadadam…</li>
+                    <li>Nee chethullo gorintaku chusi naa future ni oohinchukovadam…</li>
+                    <li>Sai Baba sannidhi lo iddaram kalisi nilabadadam…</li>
+                </ul>
+                <p>Ivanni choosthe ardham avuthundi…</p>
+                <p>Mana prema pedda sanghatanalatho kaadhu… <strong>Chinna chinna gnapakalatho peruguthundani.</strong></p>
+                <p>Nijam cheppalante…</p>
+                <p>Ee aru nelallo nuvvu naaku oka girlfriend maatrame kaaledu.</p>
+                <p class="modal-highlight">Naa best friend ayyavu.</p>
+                <p class="modal-highlight">Naa dhairyam ayyavu.</p>
+                <p class="modal-highlight">Naa navvu ayyavu.</p>
+                <p>Konni rojulu nannu baadha pettavu…</p>
+                <p>Aa baadha nenu eppatiki marchipolenu.</p>
+                <p>Kani…</p>
+                <p>Aa baadha kanna nuvvu naaku ichina santhosham chala ekkuva.</p>
+                <p>Anduke…</p>
+                <p>Aa baadhani kuda oka gnapakam la dachukunna.</p>
+                <p>Endhukante…</p>
+                <p>Adhi kuda mana journey lone oka page.</p>
+                <p class="modal-gold">Nuvvu nannu marchesthunnaavu Bangaram…</p>
+                <p>Mundu nenu kalalu kannevadini. Ippudu mana future gurinchi kalalu kanthunnanu.</p>
+                <p>Mundu nenu naa gurinchi alochinchevadini. Ippudu mundhu nee gurinche alochisthanu.</p>
+                <p>Mundu nenu naa room lo naa photo frame pettukoledu. Ee roju naa room lo unna modati frame… <strong>Naa Bangaram.</strong></p>
+                <p>Mundu Sai Baba ki namaskaram cheyyadam kuda manesanu. Ee roju… Mana iddarini tana sannidhi daggaraki pilichina aa Baba meedha malli nammakam puttindi.</p>
+                <p>Konni sarlu bhayam vesthundi…</p>
+                <p>Future gurinchi.</p>
+                <p>Paristhithula gurinchi.</p>
+                <p>Kani aa bhayam vachina prathi sari… Oka maata gurthosthundi.</p>
+                <p>Mana kalisina roju kuda manam plan cheyyaledu. Adhi jarigindi.</p>
+                <p>Appudu…</p>
+                <p><strong>Mana future ni kuda ayane rayagaladu ani nammutanu.</strong></p>
+                <p>Bangaram…</p>
+                <p>Thank you.</p>
+                <p>Nannu ardham chesukune prayatnam chesinanduku.</p>
+                <p>Naa allari bharinchinanduku.</p>
+                <p>Naa overthinking bharinchinanduku.</p>
+                <p>Naa prema ni oppukunnanduku.</p>
+                <p>Ee aru nelallo naaku ichina…</p>
+                <p class="modal-highlight">Prathi navvu… Prathi memory… Prathi photo… Prathi call… Prathi message… Prathi “Bava…”</p>
+                <p>Naa jeevitham lo atyanta viluvaina bahumathi.</p>
+                <p>Samayam gadichipothundi…</p>
+                <p>Photos old aipothayi…</p>
+                <p>Messages delete aipovachu…</p>
+                <p>Kani…</p>
+                <p><strong>Mana iddaram kalisi create chesina ee gnapakalu maatram eppatiki mana hrudayallo brathikuntayi.</strong></p>
+            </div>
+            <footer class="modal-sign-off">
+                <h2>Happy 6 Months, Bangaram. ❤️</h2>
+                <p>Ee aru nelallo ninnu preminchina vidhanam kanna… Raboye prathi nela, prathi samvatsaram, prathi janmalo inka ekkuvaga preminchali anedhe naa korika.</p>
+                <p>Naa jeevitham lo jarigina ati andamaina coincidence… <strong>nuvvu.</strong></p>
+                <p>Naa jeevitham lo jaragaboye ati andamaina decision… <strong>ninnu eppatiki vadalakunda preminchadam.</strong></p>
+                <p>Happy 6 Months, naa Bangaram.</p>
+                <div class="modal-forever-tag">
+                    I Love You. Yesterday. Today. Tomorrow. Forever. ❤️
+                </div>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="modal-overlay" style="display:none; background-color:rgba(0,0,0,0.95); z-index:10001;">
+    <button class="modal-close-btn" onclick="closeVideoModal()">✕</button>
+    <div style="display:flex; justify-content:center; align-items:center; height:100vh; padding:20px;">
+        <video id="myVideo" controls playsinline webkit-playsinline preload="metadata" style="max-width:100%; max-height:80vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8);">
+            <source src="https://cdn.jsdelivr.net/gh/dineshesarapu/bangaram@main/f7fb992e-a16a-4d99-bbca-1b1b5ef5b936.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </div>
+</div>
+
+<script>
+    // Days Together Counter
+    const start = new Date("2026-02-05");
+    const today = new Date();
+    start.setHours(0,0,0,0);
+    today.setHours(0,0,0,0);
+    const days = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+    document.getElementById("days").innerHTML =
+        "Together since <b>5 February 2026</b><br><br><span style='font-size:24px; font-weight:bold;'>" + days + " Beautiful Days ❤️</span>";
+
+    // Cycle Tracker
+    const lastPeriod = new Date("2026-08-14");
+    const cycleLength = 28;
+    let nextPeriod = new Date(lastPeriod);
+    while (nextPeriod <= today) {
+        nextPeriod.setDate(nextPeriod.getDate() + cycleLength);
+    }
+    const daysLeft = Math.ceil((nextPeriod - today) / (1000 * 60 * 60 * 24));
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("cycleInfo").innerHTML = `
+        <b>🌸 Last Period</b><br>
+        14 August 2026
+        <br><br>
+        <b>📅 Estimated Next Period</b><br>
+        ${nextPeriod.toLocaleDateString('en-US', options)}
+        <br><br>
+        <b>⏳ Countdown</b><br>
+        ${daysLeft} day(s) remaining
+        <br><br>
+        <small style='opacity:0.8;'>This is an estimate based on a 28-day cycle.</small>
+    `;
+
+
+    // Generic Modal open/close
+    function openModal(id) {
+        document.getElementById(id).style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Video Modal
+    function openVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('myVideo');
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        video.play();
+    }
+    function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const video = document.getElementById('myVideo');
+        video.pause();
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Escape key closes any open modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay').forEach(m => {
+                if (m.style.display === 'block') {
+                    m.style.display = 'none';
+                }
+            });
+            document.body.style.overflow = 'auto';
+            const video = document.getElementById('myVideo');
+            if (video) video.pause();
+        }
+    });
+
+    // Floating hearts only when a modal is open
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('modal-heart-particles');
+        const particleIcons = ['❤️', '💖', '✨', '💕', '🌸'];
+        setInterval(() => {
+            const anyOpen = Array.from(document.querySelectorAll('.modal-overlay')).some(m => m.style.display === 'block');
+            if (anyOpen && container) {
+                const particle = document.createElement('div');
+                particle.className = 'modal-particle';
+                particle.innerHTML = particleIcons[Math.floor(Math.random() * particleIcons.length)];
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                particle.style.fontSize = (Math.random() * 0.8 + 0.8) + 'rem';
+                container.appendChild(particle);
+                setTimeout(() => particle.remove(), 10000);
+            }
+        }, 400);
+    });
+</script>
+
+</body>
+</html>
